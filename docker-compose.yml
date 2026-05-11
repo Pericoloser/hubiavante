@@ -1,0 +1,48 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: hubiavante_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: iavante
+      POSTGRES_PASSWORD: iavante2024
+      POSTGRES_DB: hubiavante
+    ports:
+      - '5432:5432'
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: hubiavante_api
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: postgresql://iavante:iavante2024@db:5432/hubiavante
+      JWT_SECRET: hub_iavante_secret_prod_change_me
+      FRONTEND_URL: http://localhost:5173
+      PORT: 3001
+    ports:
+      - '3001:3001'
+    depends_on:
+      - db
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: hubiavante_web
+    restart: unless-stopped
+    ports:
+      - '5173:80'
+    depends_on:
+      - backend
+
+volumes:
+  pgdata:

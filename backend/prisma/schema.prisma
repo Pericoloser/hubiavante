@@ -1,0 +1,354 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ─── BASES DE DATOS ────────────────────────────────────────────────────────────
+
+model Cliente {
+  id              Int       @id @default(autoincrement())
+  nombre          String
+  cif             String?   @unique
+  tipo            String    // hospital, clinica, universidad, empresa, administracion
+  contacto        String?
+  email           String?
+  telefono        String?
+  direccion       String?
+  ciudad          String?
+  provincia       String?
+  codigoPostal    String?
+  observaciones   String?
+  activo          Boolean   @default(true)
+  creadoEn        DateTime  @default(now())
+  actualizadoEn   DateTime  @updatedAt
+
+  fichasTecnicas  FichaTecnica[]
+  presupuestos    Presupuesto[]
+  propuestas      PropuestaComercial[]
+
+  @@map("clientes")
+}
+
+model Tarifa {
+  id              Int       @id @default(autoincrement())
+  nombre          String
+  descripcion     String?
+  precio          Float
+  tipo            String    // hora, sesion, dia, modulo, curso
+  categoria       String?   // docencia, coordinacion, simulacion, material
+  activo          Boolean   @default(true)
+  creadoEn        DateTime  @default(now())
+  actualizadoEn   DateTime  @updatedAt
+
+  docentes        Docente[]
+  lineasPresupuesto LineaPresupuesto[]
+
+  @@map("tarifas")
+}
+
+model Alumno {
+  id                  Int       @id @default(autoincrement())
+  nombre              String
+  apellidos           String
+  email               String?   @unique
+  telefono            String?
+  dni                 String?   @unique
+  empresa             String?
+  categoriaProfesional String?  // medico, enfermero, tecnico, gestor, otro
+  titulacion          String?
+  especialidad        String?
+  observaciones       String?
+  activo              Boolean   @default(true)
+  creadoEn            DateTime  @default(now())
+  actualizadoEn       DateTime  @updatedAt
+
+  fichas              AlumnoFicha[]
+  asistencias         Asistencia[]
+
+  @@map("alumnos")
+}
+
+model Docente {
+  id                  Int       @id @default(autoincrement())
+  nombre              String
+  apellidos           String
+  email               String?   @unique
+  telefono            String?
+  dni                 String?   @unique
+  especialidad        String?
+  titulacion          String?
+  categoria           String?   // experto, tutor, coordinador, colaborador
+  tarifaId            Int?
+  cv                  String?
+  observaciones       String?
+  activo              Boolean   @default(true)
+  creadoEn            DateTime  @default(now())
+  actualizadoEn       DateTime  @updatedAt
+
+  tarifa              Tarifa?   @relation(fields: [tarifaId], references: [id])
+  fichas              DocenteFicha[]
+  sesiones            Sesion[]
+
+  @@map("docentes")
+}
+
+// ─── FICHA TÉCNICA ─────────────────────────────────────────────────────────────
+
+model FichaTecnica {
+  id                  Int       @id @default(autoincrement())
+  codigo              String    @unique
+  titulo              String
+  clienteId           Int
+  tipoFormacion       String    // simulacion_clinica, taller, curso, seminario, webinar
+  modalidad           String    // presencial, online, semipresencial
+  descripcion         String?
+  objetivosGenerales  String?
+  objetivosEspecificos String?
+  contenidos          String?
+  metodologia         String?
+  criteriosEvaluacion String?
+  duracionHoras       Float?
+  numAlumnosMin       Int?
+  numAlumnosMax       Int?
+  lugar               String?
+  fechaInicio         DateTime?
+  fechaFin            DateTime?
+  estado              String    @default("borrador") // borrador, activa, finalizada, cancelada
+  observaciones       String?
+  creadoEn            DateTime  @default(now())
+  actualizadoEn       DateTime  @updatedAt
+
+  cliente             Cliente   @relation(fields: [clienteId], references: [id])
+  alumnos             AlumnoFicha[]
+  docentes            DocenteFicha[]
+  presupuestos        Presupuesto[]
+  propuestas          PropuestaComercial[]
+  guiaAlumno          GuiaAlumno?
+  guiaDocente         GuiaDocente?
+  sesiones            Sesion[]
+  informeFinal        InformeFinal?
+
+  @@map("fichas_tecnicas")
+}
+
+model AlumnoFicha {
+  alumnoId    Int
+  fichaId     Int
+  estado      String    @default("preinscrito") // preinscrito, inscrito, completado, baja
+  creadoEn    DateTime  @default(now())
+
+  alumno      Alumno    @relation(fields: [alumnoId], references: [id])
+  ficha       FichaTecnica @relation(fields: [fichaId], references: [id])
+
+  @@id([alumnoId, fichaId])
+  @@map("alumnos_fichas")
+}
+
+model DocenteFicha {
+  docenteId   Int
+  fichaId     Int
+  rol         String    @default("docente") // coordinador, docente, colaborador
+  creadoEn    DateTime  @default(now())
+
+  docente     Docente   @relation(fields: [docenteId], references: [id])
+  ficha       FichaTecnica @relation(fields: [fichaId], references: [id])
+
+  @@id([docenteId, fichaId])
+  @@map("docentes_fichas")
+}
+
+// ─── PRESUPUESTO ───────────────────────────────────────────────────────────────
+
+model Presupuesto {
+  id              Int       @id @default(autoincrement())
+  numero          String    @unique
+  fichaId         Int?
+  clienteId       Int
+  fecha           DateTime  @default(now())
+  validezDias     Int       @default(30)
+  concepto        String
+  subtotal        Float     @default(0)
+  descuento       Float     @default(0)
+  iva             Float     @default(21)
+  total           Float     @default(0)
+  estado          String    @default("borrador") // borrador, enviado, aceptado, rechazado, facturado
+  notas           String?
+  creadoEn        DateTime  @default(now())
+  actualizadoEn   DateTime  @updatedAt
+
+  ficha           FichaTecnica? @relation(fields: [fichaId], references: [id])
+  cliente         Cliente   @relation(fields: [clienteId], references: [id])
+  lineas          LineaPresupuesto[]
+
+  @@map("presupuestos")
+}
+
+model LineaPresupuesto {
+  id              Int       @id @default(autoincrement())
+  presupuestoId   Int
+  descripcion     String
+  cantidad        Float     @default(1)
+  precioUnitario  Float
+  descuento       Float     @default(0)
+  total           Float
+  tarifaId        Int?
+  orden           Int       @default(0)
+
+  presupuesto     Presupuesto @relation(fields: [presupuestoId], references: [id], onDelete: Cascade)
+  tarifa          Tarifa?   @relation(fields: [tarifaId], references: [id])
+
+  @@map("lineas_presupuesto")
+}
+
+// ─── PROPUESTA COMERCIAL ───────────────────────────────────────────────────────
+
+model PropuestaComercial {
+  id              Int       @id @default(autoincrement())
+  numero          String    @unique
+  fichaId         Int?
+  clienteId       Int
+  titulo          String
+  fecha           DateTime  @default(now())
+  introduccion    String?
+  necesidadDetectada String?
+  solucionPropuesta  String?
+  metodologia     String?
+  cronograma      String?
+  equipo          String?
+  condicionesEconomicas String?
+  validezDias     Int       @default(30)
+  estado          String    @default("borrador") // borrador, enviada, aceptada, rechazada
+  observaciones   String?
+  creadoEn        DateTime  @default(now())
+  actualizadoEn   DateTime  @updatedAt
+
+  ficha           FichaTecnica? @relation(fields: [fichaId], references: [id])
+  cliente         Cliente   @relation(fields: [clienteId], references: [id])
+
+  @@map("propuestas_comerciales")
+}
+
+// ─── GUÍAS ─────────────────────────────────────────────────────────────────────
+
+model GuiaAlumno {
+  id              Int       @id @default(autoincrement())
+  fichaId         Int       @unique
+  bienvenida      String?
+  presentacionCurso String?
+  objetivos       String?
+  contenidos      String?
+  horario         String?
+  metodologia     String?
+  criteriosEvaluacion String?
+  recursosDidacticos String?
+  normasConvivencia String?
+  contacto        String?
+  creadoEn        DateTime  @default(now())
+  actualizadoEn   DateTime  @updatedAt
+
+  ficha           FichaTecnica @relation(fields: [fichaId], references: [id])
+
+  @@map("guias_alumno")
+}
+
+model GuiaDocente {
+  id              Int       @id @default(autoincrement())
+  fichaId         Int       @unique
+  introduccion    String?
+  objetivos       String?
+  contenidos      String?
+  metodologiaDetallada String?
+  temporalizacion String?
+  recursosNecesarios String?
+  criteriosEvaluacion String?
+  protocolosSimulacion String?
+  debriefingGuia  String?
+  observaciones   String?
+  creadoEn        DateTime  @default(now())
+  actualizadoEn   DateTime  @updatedAt
+
+  ficha           FichaTecnica @relation(fields: [fichaId], references: [id])
+
+  @@map("guias_docente")
+}
+
+// ─── SEGUIMIENTO ───────────────────────────────────────────────────────────────
+
+model Sesion {
+  id              Int       @id @default(autoincrement())
+  fichaId         Int
+  numero          Int
+  fecha           DateTime
+  docenteId       Int?
+  duracionHoras   Float?
+  lugar           String?
+  contenidoImpartido String?
+  observaciones   String?
+  incidencias     String?
+  creadoEn        DateTime  @default(now())
+  actualizadoEn   DateTime  @updatedAt
+
+  ficha           FichaTecnica @relation(fields: [fichaId], references: [id])
+  docente         Docente?  @relation(fields: [docenteId], references: [id])
+  asistencias     Asistencia[]
+
+  @@map("sesiones")
+}
+
+model Asistencia {
+  id          Int       @id @default(autoincrement())
+  sesionId    Int
+  alumnoId    Int
+  asistio     Boolean   @default(false)
+  justificada Boolean   @default(false)
+  observacion String?
+
+  sesion      Sesion    @relation(fields: [sesionId], references: [id], onDelete: Cascade)
+  alumno      Alumno    @relation(fields: [alumnoId], references: [id])
+
+  @@unique([sesionId, alumnoId])
+  @@map("asistencias")
+}
+
+// ─── INFORME FINAL ─────────────────────────────────────────────────────────────
+
+model InformeFinal {
+  id                    Int       @id @default(autoincrement())
+  fichaId               Int       @unique
+  fecha                 DateTime  @default(now())
+  resumenEjecutivo      String?
+  cumplimientoObjetivos String?
+  resultadosAprendizaje String?
+  evaluacionDocentes    String?
+  evaluacionAlumnos     String?
+  datosAsistencia       String?
+  incidenciasRegistradas String?
+  conclusiones          String?
+  recomendaciones       String?
+  estado                String    @default("borrador") // borrador, finalizado
+  creadoEn              DateTime  @default(now())
+  actualizadoEn         DateTime  @updatedAt
+
+  ficha                 FichaTecnica @relation(fields: [fichaId], references: [id])
+
+  @@map("informes_finales")
+}
+
+// ─── USUARIO / AUTH ────────────────────────────────────────────────────────────
+
+model Usuario {
+  id            Int       @id @default(autoincrement())
+  nombre        String
+  email         String    @unique
+  password      String
+  rol           String    @default("gestor") // admin, gestor, docente
+  activo        Boolean   @default(true)
+  creadoEn      DateTime  @default(now())
+  actualizadoEn DateTime  @updatedAt
+
+  @@map("usuarios")
+}
