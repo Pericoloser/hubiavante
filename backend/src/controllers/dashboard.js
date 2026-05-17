@@ -21,8 +21,7 @@ const getStats = async (req, res, next) => {
       prisma.fichaTecnica.findMany({
         take: 5,
         orderBy: { creadoEn: 'desc' },
-        include: { cliente: { select: { nombre: true } } },
-        select: { id: true, codigo: true, titulo: true, estado: true, cliente: true, creadoEn: true }
+        select: { id: true, codigo: true, titulo: true, estado: true, creadoEn: true, cliente: { select: { nombre: true } } }
       })
     ]);
 
