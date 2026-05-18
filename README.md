@@ -1,83 +1,119 @@
 # HUB IAVANTE — Plataforma de Gestión Formativa
 
-Sistema integral para la gestión de actividades formativas en simulación clínica y formación sanitaria.
+## Estado del proyecto
 
-## Módulos
-
-| Módulo | Descripción |
+| Componente | Estado |
 |---|---|
-| **Ficha Técnica** | Registro completo de la actividad formativa |
-| **Presupuestos** | Gestión económica con líneas y tarifas |
-| **Propuesta Comercial** | Documentos de oferta para clientes |
-| **Guía del Alumno** | Documento orientativo para participantes |
-| **Guía del Docente** | Instrucciones para el equipo docente |
-| **Seguimiento** | Control de sesiones y asistencia |
-| **Informe Final** | Memoria y resultados de la actividad |
-| **BBDD Clientes** | Entidades contratantes |
-| **BBDD Alumnos** | Participantes formados |
-| **BBDD Docentes** | Equipo docente con tarifas |
-| **BBDD Tarifas** | Catálogo de precios |
+| Código fuente completo | ✅ Listo |
+| Base de datos (esquema + seed) | ✅ Listo |
+| Backend API (Node.js + Express) | ✅ Listo |
+| Frontend (React + Vite) | ✅ Listo |
+| Scripts Linux/Mac | ✅ Listos |
+| Scripts Windows | ✅ Listos |
+
+---
+
+## Requisitos en tu PC
+
+| Programa | Para qué sirve | Cómo verificar |
+|---|---|---|
+| Node.js v18+ | Ejecutar el servidor | `node --version` |
+| npm | Instalar dependencias | `npm --version` |
+| PostgreSQL 16 | Base de datos | `psql --version` |
+
+---
+
+## Instalación paso a paso en Windows
+
+### 1 · Instalar PostgreSQL (si no lo tienes)
+
+Descarga el instalador desde:
+```
+https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
+```
+- Versión: **16**, plataforma: **Windows x86-64**
+- Durante la instalación, cuando pida contraseña escribe: `iavante2024`
+- Puerto: `5432` (por defecto)
+- Al terminar, reabre PowerShell y verifica con: `psql --version`
+
+### 2 · Descargar el proyecto
+
+```powershell
+git clone https://github.com/Pericoloser/hubiavante.git
+cd hubiavante
+git checkout claude/hub-iavante-platform-4rS1M
+```
+
+O si ya lo tienes descargado, solo actualiza:
+```powershell
+cd hubiavante
+git pull
+```
+
+### 3 · Setup inicial (solo una vez)
+
+```powershell
+.\setup.ps1
+```
+
+Esto instala dependencias, crea la base de datos y carga los datos iniciales.
+
+### 4 · Arrancar la plataforma (cada vez)
+
+```powershell
+.\arrancar.ps1
+```
+
+Abre el navegador en **http://localhost:5173**
+
+### 5 · Detener la plataforma
+
+Pulsa `Ctrl+C` en la ventana de PowerShell, o ejecuta:
+```powershell
+.\parar.ps1
+```
+
+---
+
+## Acceso
+
+| Campo | Valor |
+|---|---|
+| URL | http://localhost:5173 |
+| Usuario | admin@iavante.es |
+| Contraseña | iavante2024 |
+
+---
+
+## Módulos disponibles
+
+| Módulo | Ruta |
+|---|---|
+| Dashboard | /dashboard |
+| Fichas Técnicas | /fichas |
+| Presupuestos | /presupuestos |
+| Propuestas Comerciales | /propuestas |
+| Guía del Alumno | /fichas/:id/guia-alumno |
+| Guía del Docente | /fichas/:id/guia-docente |
+| Seguimiento | /fichas/:id/seguimiento |
+| Informe Final | /fichas/:id/informe |
+| Base de datos Clientes | /bbdd/clientes |
+| Base de datos Alumnos | /bbdd/alumnos |
+| Base de datos Docentes | /bbdd/docentes |
+| Base de datos Tarifas | /bbdd/tarifas |
+
+---
+
+## Datos precargados
+
+- **1 cliente**: Hospital Universitario Virgen del Rocío (Sevilla)
+- **6 tarifas**: Docencia/hora, Coordinación/hora, Simulación clínica/hora, Material/sesión, Sala/día, Curso online
+- **1 usuario admin**: admin@iavante.es / iavante2024
+
+---
 
 ## Stack tecnológico
 
 - **Frontend**: React 18 + Vite + TailwindCSS
 - **Backend**: Node.js + Express + Prisma ORM
 - **Base de datos**: PostgreSQL 16
-
-## Inicio rápido (desarrollo local)
-
-### 1. Levantar PostgreSQL
-
-```bash
-docker compose up db -d
-```
-
-### 2. Backend
-
-```bash
-cd backend
-cp .env.example .env
-npm install
-npx prisma migrate dev --name init
-node prisma/seed.js
-npm run dev
-```
-
-### 3. Frontend
-
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-Accede en: **http://localhost:5173**
-
-Credenciales por defecto: `admin@iavante.es` / `iavante2024`
-
-## Despliegue completo con Docker
-
-```bash
-docker compose up --build
-```
-
-## Estructura del proyecto
-
-```
-hubiavante/
-├── backend/
-│   ├── prisma/schema.prisma    # Modelos de base de datos
-│   ├── src/
-│   │   ├── controllers/        # Lógica de negocio
-│   │   ├── routes/             # Endpoints API REST
-│   │   └── middleware/         # Auth JWT
-│   └── package.json
-├── frontend/
-│   ├── src/
-│   │   ├── pages/              # Módulos UI
-│   │   ├── components/         # Componentes reutilizables
-│   │   ├── services/api.js     # Cliente HTTP
-│   │   └── context/            # Estado global (auth)
-│   └── package.json
-└── docker-compose.yml
-```
