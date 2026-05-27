@@ -43,19 +43,18 @@
   <div class="topbar" role="banner">
     <div class="container">
       <div class="topbar-left">
-        <div class="eu-stars" aria-label="Unión Europea">
-          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-          <span>★</span><span>★</span>
-        </div>
-        <span class="topbar-text">
-          Cofinanciado por la <strong>Unión Europea</strong> · Programa
-          <strong>Interreg VI-A España-Portugal (POCTEP) 2021-2027</strong>
-        </span>
+        <!-- Interreg España-Portugal official logo (white on dark) -->
+        <a href="https://www.poctep.eu" target="_blank" rel="noopener"
+           aria-label="Interreg VI-A España-Portugal – POCTEP 2021-2027">
+          <img src="images/logos/interreg-poctep.svg"
+               alt="Interreg VI-A España-Portugal · Cofinanciado por la Unión Europea"
+               height="28"
+               style="filter:brightness(0) invert(1);opacity:.9;vertical-align:middle"/>
+        </a>
       </div>
       <div class="topbar-right">
         <a href="https://www.poctep.eu" target="_blank" rel="noopener">POCTEP</a>
-        <a href="https://ec.europa.eu/regional_policy/funding/interreg_en" target="_blank" rel="noopener">Interreg</a>
+        <a href="https://interreg.eu/programme/interreg-spain-portugal/" target="_blank" rel="noopener">Interreg</a>
       </div>
     </div>
   </div>
@@ -261,11 +260,14 @@
             </div>
 
             <div class="poctep-badge reveal reveal-delay-3">
-              <div class="eu-flag" aria-hidden="true">🇪🇺</div>
-              <p id="poctep-badge-text">
-                <strong>Cofinanciado por la Unión Europea</strong><br/>
-                Interreg VI-A España-Portugal (POCTEP) 2021-2027<br/>
-                Fondo Europeo de Desarrollo Regional (FEDER)
+              <a href="https://www.poctep.eu" target="_blank" rel="noopener"
+                 aria-label="Interreg VI-A España-Portugal – POCTEP 2021-2027">
+                <img src="images/logos/interreg-poctep.svg"
+                     alt="Interreg VI-A España-Portugal · Cofinanciado por la Unión Europea"
+                     style="width:100%;max-width:380px;height:auto;display:block;margin:0 auto"/>
+              </a>
+              <p id="poctep-badge-text" style="margin-top:.75rem">
+                Fondo Europeo de Desarrollo Regional (FEDER) · 2021-2027
               </p>
             </div>
           </div>
@@ -415,6 +417,17 @@
        FOOTER
   ══════════════════════════════════════════════════ -->
   <footer role="contentinfo">
+    <!-- EU Funding strip – full colour on white background (as required by EU communication rules) -->
+    <div class="footer-eu-strip" role="complementary" aria-label="Financiación de la Unión Europea">
+      <div class="container">
+        <a href="https://www.poctep.eu" target="_blank" rel="noopener"
+           aria-label="Interreg VI-A España-Portugal – POCTEP 2021-2027">
+          <img src="images/logos/interreg-poctep.svg"
+               alt="Interreg VI-A España-Portugal · Cofinanciado por la Unión Europea · Cofinanciado pela União Europeia"
+               style="height:72px;width:auto;display:block"/>
+        </a>
+      </div>
+    </div>
     <div class="footer-top">
       <div class="container">
         <div class="footer-grid">
@@ -467,15 +480,13 @@
           <a href="#" id="footer-cookies">Cookies</a>
         </nav>
         <div class="footer-eu" aria-label="Financiación europea">
-          <div class="eu-logo-mini">
-            <div class="eu-stars" aria-hidden="true">
-              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-            </div>
-            <span>Financiado por la UE</span>
-          </div>
-          <div class="eu-logo-mini">
-            <span>🔗 POCTEP 2021-2027</span>
-          </div>
+          <a href="https://www.poctep.eu" target="_blank" rel="noopener"
+             title="Interreg VI-A España-Portugal – POCTEP 2021-2027">
+            <img src="images/logos/interreg-poctep.svg"
+                 alt="Interreg VI-A España-Portugal · Cofinanciado por la Unión Europea"
+                 height="36"
+                 style="filter:brightness(0) invert(1);opacity:.75;vertical-align:middle"/>
+          </a>
         </div>
       </div>
     </div>

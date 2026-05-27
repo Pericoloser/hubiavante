@@ -8,7 +8,7 @@
 // 1. Create a free account at formspree.io
 // 2. Click "New Form" → give it a name → copy the form ID (e.g. "xpwzlkno")
 // 3. Replace "YOUR_FORM_ID" below with your actual ID
-const FORMSPREE_ID = 'YOUR_FORM_ID';
+const FORMSPREE_ID = 'xnjroekn';
 const FORMSPREE_ENDPOINT = FORMSPREE_ID !== 'YOUR_FORM_ID'
   ? `https://formspree.io/f/${FORMSPREE_ID}`
   : null; // if null, will simulate send (demo mode)
