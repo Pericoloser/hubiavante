@@ -15,12 +15,17 @@ const FORMSPREE_ENDPOINT = FORMSPREE_ID !== 'YOUR_FORM_ID'
 
 /* ── Logo map ───────────────────────────────────────────── */
 const PARTNER_LOGOS = {
-  'BP':  'images/logos/fps.png',    // "FPS Vertical Principal.png" → renombrar a fps.png
+  'BP':  'images/logos/fps.png',   // Coloca "FPS Vertical Principal.png" → images/logos/fps.png
   'BE2': 'images/logos/usc.svg',
   'BE3': 'images/logos/chtmad.svg',
   'BE4': 'images/logos/hvr.svg',
   'BE5': 'images/logos/chuc.svg',
   'BE6': 'images/logos/fisevi.svg',
+};
+
+// Fallback SVG if the PNG is not yet uploaded
+const PARTNER_LOGO_FALLBACKS = {
+  'BP': 'images/logos/fps.svg',
 };
 
 /* ── State ─────────────────────────────────────────────── */
@@ -121,8 +126,12 @@ function renderPartners(t) {
   container.innerHTML = s.partners.map((p, i) => {
     const isLead = p.ref === 'BP';
     const logoSrc = PARTNER_LOGOS[p.ref];
+    const fallbackSrc = PARTNER_LOGO_FALLBACKS[p.ref] || '';
     const logoEl = logoSrc
-      ? `<img src="${logoSrc}" alt="${p.name}" loading="lazy"/>`
+      ? `<img src="${logoSrc}"
+             alt="${p.name}" loading="lazy"
+             ${fallbackSrc ? `onerror="this.onerror=null;this.src='${fallbackSrc}'"` : ''}
+          />`
       : `<span class="partner-logo-placeholder">${p.abbr}</span>`;
     return `
     <article class="partner-card ${isLead ? 'lead-card' : ''} reveal reveal-delay-${(i % 4) + 1}">
