@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="12" fill="#003d8f"/>
+  <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle"
+        font-family="Inter,Arial,sans-serif" font-weight="900" font-size="26"
+        fill="white" letter-spacing="-1">S4</text>
+  <circle cx="52" cy="52" r="10" fill="#00a69c"/>
+</svg>

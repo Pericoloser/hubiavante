@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 340">
+  <title>Junta de Andalucía – Fundación Pública Andaluza Progreso y Salud</title>
+  <!--
+    FPS – Vertical Principal
+    A emblem: two-tone 3D green A with flowing crossbar
+    Left leg / crossbar  → bright green  #4DB840
+    Right leg            → deep green    #1D7A21
+  -->
+
+  <!-- ── LEFT LEG (bright green – front/left face) ── -->
+  <polygon
+    points="120,12 19,203 63,203 120,40"
+    fill="#4DB840"/>
+
+  <!-- ── RIGHT LEG (deep green – right/side face) ── -->
+  <polygon
+    points="120,12 221,203 177,203 120,40"
+    fill="#1D7A21"/>
+
+  <!-- ── CROSSBAR: S-curve ribbon, bright green ──── -->
+  <!--
+    Starts where left inner edge is at ~y=112,
+    sweeps across with gentle S-curve to right inner edge at ~y=104,
+    comes back along bottom with smooth arc.
+  -->
+  <path
+    d="M 93,112
+       C 110,100 133,100 151,104
+       L 165,133
+       C 145,127 109,128 80,141
+       Z"
+    fill="#4DB840"/>
+
+  <!-- ── INNER FOLD SHADOW (apex crease depth) ───── -->
+  <polygon
+    points="120,12 116,40 124,40"
+    fill="#0F5213"
+    opacity="0.45"/>
+
+  <!-- ── TEXT ─────────────────────────────────────── -->
+
+  <!-- "Junta de Andalucía" – bold charcoal -->
+  <text x="120" y="237"
+    text-anchor="middle"
+    font-family="'Arial Black',Arial,Helvetica,sans-serif"
+    font-size="27.5" font-weight="900"
+    fill="#1F1F1F">Junta de Andalucía</text>
+
+  <!-- "Consejería de Sanidad…" – medium bold gray -->
+  <text x="120" y="263"
+    text-anchor="middle"
+    font-family="Arial,Helvetica,sans-serif"
+    font-size="14" font-weight="700"
+    fill="#383838">Consejería de Sanidad, Presidencia</text>
+  <text x="120" y="280"
+    text-anchor="middle"
+    font-family="Arial,Helvetica,sans-serif"
+    font-size="14" font-weight="700"
+    fill="#383838">y Emergencias</text>
+
+  <!-- "Fundación Pública Andaluza…" – light gray -->
+  <text x="120" y="305"
+    text-anchor="middle"
+    font-family="Arial,Helvetica,sans-serif"
+    font-size="13" fill="#636363">Fundación Pública Andaluza</text>
+  <text x="120" y="322"
+    text-anchor="middle"
+    font-family="Arial,Helvetica,sans-serif"
+    font-size="13" fill="#636363">Progreso y Salud</text>
+</svg>

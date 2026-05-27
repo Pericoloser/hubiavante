@@ -1,0 +1,223 @@
+{
+  "lang": "pt",
+  "nav": {
+    "proyecto": "Projeto",
+    "socios": "Parceiros",
+    "actividades": "Atividades",
+    "noticias": "Notícias",
+    "contacto": "Contacto"
+  },
+  "hero": {
+    "tagline": "Modelo Integrado de Formação em Simulação Clínica em Urgência e Emergência em Contextos Transfronteiriços",
+    "subtitle": "Um projeto POCTEP para transformar a formação em saúde nas urgências e emergências em ambos os lados da fronteira hispano-portuguesa",
+    "btn_proyecto": "Conhecer o projeto",
+    "btn_socios": "Ver parceiros"
+  },
+  "stats": {
+    "presupuesto": "Orçamento total",
+    "subvencion": "Subvenção UE",
+    "socios": "Parceiros",
+    "duracion": "Anos de projeto"
+  },
+  "proyecto": {
+    "title": "O Projeto",
+    "subtitle": "SIM4UE aborda uma problemática partilhada em territórios transfronteiriços",
+    "p1": "SIM4UE é um projeto cofinanciado pelo programa Interreg VI-A Espanha-Portugal (POCTEP) 2021-2027, que responde à necessidade urgente de melhorar os cuidados de saúde em urgência e emergência nas regiões transfronteiriças de Espanha e Portugal.",
+    "p2": "Através do desenvolvimento de um Ambiente Virtual de Aprendizagem por Simulação, SIM4UE integra metodologias pedagógicas inovadoras, tecnologias imersivas (Realidade Virtual, Realidade Aumentada, Inteligência Artificial) e conteúdos formativos bilingues, com o objetivo de reforçar as competências clínicas dos profissionais de saúde e melhorar a cooperação transfronteiriça.",
+    "p3": "O projeto decorre entre 1 de janeiro de 2026 e 31 de dezembro de 2028, com um orçamento total de 4.725.090 € e a participação de seis instituições de saúde e académicas de Espanha e Portugal.",
+    "obj_title": "Objetivos principais",
+    "obj1": "Desenvolver um Ambiente Virtual de Aprendizagem por Simulação para formação aberta em saúde em urgência e emergência.",
+    "obj2": "Conceber e implementar uma ferramenta online multidispositivo com conteúdos didáticos inovadores, simulações clínicas e recursos formativos em espanhol e português.",
+    "obj3": "Integrar itinerários personalizados, melhoria contínua de competências clínicas e cooperação transfronteiriça orientada para a melhoria da prática clínica.",
+    "poctep_label": "Projeto cofinanciado por",
+    "period_label": "Período de execução",
+    "period_value": "01/01/2026 – 31/12/2028",
+    "budget_label": "Orçamento total",
+    "budget_value": "4.725.090 €"
+  },
+  "socios": {
+    "title": "Parceiros do Projeto",
+    "subtitle": "Seis instituições líderes de Espanha e Portugal a trabalhar em conjunto",
+    "lead": "Parceiro Líder",
+    "partners": [
+      {
+        "ref": "BP",
+        "name": "Fundação Pública Andaluza Progresso e Saúde",
+        "abbr": "FPS / IAVANTE",
+        "country": "Espanha",
+        "city": "Sevilha, Andaluzia",
+        "budget": "1.632.951 €",
+        "role": "Coordenador do projeto",
+        "desc": "Instituição pública andaluza de referência em formação em saúde por simulação. IAVANTE é a unidade de simulação e inovação educativa da Fundação Progresso e Saúde.",
+        "flag": "🇪🇸"
+      },
+      {
+        "ref": "BE2",
+        "name": "Universidade de Santiago de Compostela",
+        "abbr": "USC",
+        "country": "Espanha",
+        "city": "Santiago de Compostela, Galiza",
+        "budget": "1.076.345 €",
+        "role": "Responsável pela avaliação e impacto",
+        "desc": "Uma das universidades mais antigas e prestigiadas da Europa. Lidera os estudos de avaliação integral, análise de impacto e divulgação dos resultados do projeto.",
+        "flag": "🇪🇸"
+      },
+      {
+        "ref": "BE3",
+        "name": "Centro Hospitalar de Trás-os-Montes e Alto Douro",
+        "abbr": "CHTMAD",
+        "country": "Portugal",
+        "city": "Vila Real, Portugal",
+        "budget": "882.543 €",
+        "role": "Formação em atendimento extra-hospitalar",
+        "desc": "Hospital de referência do nordeste de Portugal. Lidera o desenho e a ministração de cenários formativos em atendimento extra-hospitalar de urgência e emergência.",
+        "flag": "🇵🇹"
+      },
+      {
+        "ref": "BE4",
+        "name": "Hospital Virgen del Rocío",
+        "abbr": "HVR",
+        "country": "Espanha",
+        "city": "Sevilha, Andaluzia",
+        "budget": "157.953 €",
+        "role": "Formação em urgências obstétricas",
+        "desc": "Hospital universitário de alta complexidade com referência nacional e internacional. Responsável pelo desenho e implementação de cenários de simulação para urgências obstétricas.",
+        "flag": "🇪🇸"
+      },
+      {
+        "ref": "BE5",
+        "name": "Centro Hospitalar e Universitário de Coimbra",
+        "abbr": "CHUC",
+        "country": "Portugal",
+        "city": "Coimbra, Portugal",
+        "budget": "692.895 €",
+        "role": "Formação em urgências hospitalares",
+        "desc": "Centro hospitalar e universitário de referência em Portugal. Lidera o desenho, validação e ministração de cenários formativos em urgências hospitalares.",
+        "flag": "🇵🇹"
+      },
+      {
+        "ref": "BE6",
+        "name": "Junta de Andaluzia – FISEVI",
+        "abbr": "FISEVI",
+        "country": "Espanha",
+        "city": "Sevilha, Andaluzia",
+        "budget": "282.400 €",
+        "role": "Modelo partilhado de simulação",
+        "desc": "Fundação para a Investigação em Saúde de Sevilha (FISEVI). Colabora no desenvolvimento do modelo partilhado de formação de facilitadores em simulação clínica.",
+        "flag": "🇪🇸"
+      }
+    ]
+  },
+  "actividades": {
+    "title": "Atividades do Projeto",
+    "subtitle": "Seis atividades estruturadas para transformar a formação em saúde transfronteiriça",
+    "items": [
+      {
+        "id": "A1",
+        "title": "Ambiente Virtual de Aprendizagem",
+        "period": "01/01/2026 – 31/12/2027",
+        "lead": "FPS / IAVANTE",
+        "desc": "Desenvolvimento de uma plataforma online multidispositivo com conteúdos didáticos inovadores, simulações clínicas, tecnologias imersivas (RV, RA, IA) e itinerários formativos personalizados em espanhol e português.",
+        "deliverable": "Plataforma online operacional e validada"
+      },
+      {
+        "id": "A2",
+        "title": "Modelo Partilhado de Simulação",
+        "period": "01/01/2026 – 30/04/2027",
+        "lead": "FPS, FISEVI, CHTMAD, CHUC",
+        "desc": "Desenvolvimento de um quadro comum de competências e objetivos pedagógicos, desenho do modelo de curso para a formação inicial de facilitadores e realização de 5 edições.",
+        "deliverable": "Modelo educativo unificado e replicável"
+      },
+      {
+        "id": "A3",
+        "title": "Formação em Urgências de Adultos",
+        "period": "01/06/2026 – 31/12/2028",
+        "lead": "CHUC, CHTMAD, USC",
+        "desc": "Desenho, validação e ministração de cenários formativos em urgências hospitalares e atendimento extra-hospitalar, com avaliação integral e análise de impacto.",
+        "deliverable": "82 edições de formação"
+      },
+      {
+        "id": "A4",
+        "title": "Emergências Pediátricas e Obstétricas",
+        "period": "01/06/2026 – 31/12/2028",
+        "lead": "USC, HVR",
+        "desc": "Desenho, pilotagem e implementação de cenários de simulação para urgências pediátricas e obstétricas, com avaliação integral e divulgação de resultados.",
+        "deliverable": "125 edições de formação"
+      },
+      {
+        "id": "A5",
+        "title": "Gestão e Coordenação",
+        "period": "01/01/2026 – 31/12/2028",
+        "lead": "FPS / IAVANTE",
+        "desc": "Acompanhamento e elaboração de relatórios, gestão de protocolos e canais de comunicação interna, implementação de um Plano de Riscos e Garantia de Qualidade.",
+        "deliverable": "Relatórios e protocolos de gestão"
+      },
+      {
+        "id": "A6",
+        "title": "Visibilidade, Transparência e Comunicação",
+        "period": "01/01/2026 – 31/12/2028",
+        "lead": "FPS / IAVANTE",
+        "desc": "Plano de comunicação e presença nas redes sociais, identificação de possibilidades de transferência para outras regiões europeias.",
+        "deliverable": "Plano de comunicação e sítio web do projeto"
+      }
+    ]
+  },
+  "noticias": {
+    "title": "Notícias",
+    "subtitle": "Últimas novidades do projeto SIM4UE",
+    "items": [
+      {
+        "date": "06 Fevereiro 2026",
+        "tag": "Reunião",
+        "title": "Reunião de preparação do projeto SIM4UE",
+        "desc": "Os parceiros do projeto reúnem-se na reunião de lançamento para estabelecer o plano de trabalho, os marcos e o roteiro do projeto para os próximos três anos.",
+        "img": "news1"
+      },
+      {
+        "date": "Janeiro 2026",
+        "tag": "Início",
+        "title": "SIM4UE arranca oficialmente",
+        "desc": "O projeto SIM4UE inicia a sua atividade a 1 de janeiro de 2026 com o apoio do programa Interreg VI-A Espanha-Portugal (POCTEP) e a participação de seis parceiros transfronteiriços.",
+        "img": "news2"
+      },
+      {
+        "date": "Brevemente",
+        "tag": "Plataforma",
+        "title": "Desenho da Arquitetura Pedagógica",
+        "desc": "Nas próximas semanas, a equipa FPS/IAVANTE iniciará a análise comparativa de plataformas e ferramentas de simulação clínica a nível europeu e internacional.",
+        "img": "news3"
+      }
+    ]
+  },
+  "contacto": {
+    "title": "Contacto",
+    "subtitle": "Tem perguntas sobre o projeto SIM4UE?",
+    "form": {
+      "name": "Nome",
+      "email": "Endereço de e-mail",
+      "org": "Organização",
+      "message": "Mensagem",
+      "send": "Enviar mensagem",
+      "success": "Mensagem enviada com sucesso! Entraremos em contacto consigo em breve.",
+      "required": "Por favor, preencha todos os campos obrigatórios."
+    },
+    "coord_title": "Entidade coordenadora",
+    "coord_name": "Fundação Pública Andaluza Progresso e Saúde",
+    "coord_unit": "Unidade IAVANTE – Simulação e Inovação Educativa",
+    "coord_address": "Avda. de la Innovación, s/n · Parque Tecnológico de la Salud · 18016 Granada, Espanha",
+    "coord_email": "sim4ue@iavante.es",
+    "social_title": "Siga-nos"
+  },
+  "footer": {
+    "funded": "Cofinanciado pela União Europeia através do programa Interreg VI-A Espanha-Portugal (POCTEP) 2021-2027. O conteúdo deste sítio web é da exclusiva responsabilidade do consórcio SIM4UE e não reflete necessariamente a opinião da União Europeia.",
+    "rights": "© 2026 SIM4UE. Todos os direitos reservados.",
+    "privacy": "Política de privacidade",
+    "legal": "Aviso legal",
+    "cookies": "Cookies"
+  },
+  "cookie": {
+    "text": "Este sítio web utiliza cookies próprios e de terceiros para melhorar a sua experiência. Ao continuar a navegar, aceita a sua utilização.",
+    "accept": "Aceitar",
+    "more": "Mais informações"
+  }
+}

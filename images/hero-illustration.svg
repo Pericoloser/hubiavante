@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 420" fill="none">
+  <!-- Hero illustration: Cross-border clinical simulation -->
+  <!-- Background grid -->
+  <defs>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="0.8"/>
+    </pattern>
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#003d8f" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#00597a" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="pulseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="rgba(0,166,156,0)"/>
+      <stop offset="30%" stop-color="#00a69c"/>
+      <stop offset="70%" stop-color="#00a69c"/>
+      <stop offset="100%" stop-color="rgba(0,166,156,0)"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="580" height="420" fill="url(#grid)" rx="16"/>
+
+  <!-- Central monitor / simulation screen -->
+  <rect x="160" y="60" width="260" height="190" rx="12" fill="rgba(0,61,143,0.85)" stroke="rgba(0,166,156,0.6)" stroke-width="2"/>
+  <rect x="170" y="70" width="240" height="170" rx="8" fill="rgba(0,30,80,0.7)"/>
+
+  <!-- ECG / vital signs on screen -->
+  <!-- Baseline -->
+  <line x1="175" y1="155" x2="405" y2="155" stroke="rgba(0,166,156,0.2)" stroke-width="1"/>
+  <!-- ECG waveform -->
+  <polyline points="175,155 195,155 205,155 210,120 215,190 220,145 225,145 235,145 240,130 245,155 260,155 265,155 270,120 275,190 280,145 285,145 295,145 300,130 305,155 320,155 325,155 330,120 335,190 340,145 345,145 355,145 360,130 365,155 380,155 385,155 390,120 395,190 400,145 405,145"
+        stroke="#00e5d8" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- SpO2 waveform (lower) -->
+  <path d="M 175,200 Q 195,185 215,200 Q 235,215 255,200 Q 275,185 295,200 Q 315,215 335,200 Q 355,185 375,200 Q 395,215 405,205"
+        stroke="#f4a01c" stroke-width="2" fill="none"/>
+
+  <!-- Vital signs readouts -->
+  <text x="186" y="90" font-family="monospace" font-size="9" fill="rgba(255,255,255,0.5)">SIMULATION · SIM4UE</text>
+  <text x="186" y="108" font-family="monospace" font-size="22" font-weight="700" fill="#00e5d8">HR 78</text>
+  <text x="186" y="120" font-family="monospace" font-size="9" fill="rgba(0,229,216,0.6)">bpm</text>
+  <text x="300" y="108" font-family="monospace" font-size="22" font-weight="700" fill="#f4a01c">SpO₂ 98%</text>
+  <text x="300" y="120" font-family="monospace" font-size="9" fill="rgba(244,160,28,0.6)">%</text>
+  <text x="186" y="240" font-family="monospace" font-size="10" fill="rgba(255,255,255,0.4)">BP 120/80 · RR 16 · T 36.8°C</text>
+
+  <!-- Monitor stand -->
+  <rect x="277" y="250" width="26" height="30" rx="3" fill="rgba(0,61,143,0.6)"/>
+  <rect x="255" y="278" width="70" height="8" rx="4" fill="rgba(0,61,143,0.5)"/>
+
+  <!-- Left side: Spanish flag element + medical figure -->
+  <rect x="10" y="140" width="4" height="120" rx="2" fill="#e63127" opacity="0.7"/>
+  <rect x="16" y="140" width="4" height="120" rx="2" fill="#f4a01c" opacity="0.7"/>
+  <rect x="22" y="140" width="4" height="120" rx="2" fill="#e63127" opacity="0.7"/>
+
+  <!-- Doctor / facilitator silhouette left -->
+  <circle cx="80" cy="140" r="24" fill="rgba(0,61,143,0.6)" stroke="rgba(0,166,156,0.5)" stroke-width="2"/>
+  <text x="80" y="147" text-anchor="middle" font-size="22">👨‍⚕️</text>
+  <rect x="56" y="170" width="48" height="60" rx="8" fill="rgba(0,61,143,0.5)" stroke="rgba(0,166,156,0.3)" stroke-width="1.5"/>
+  <text x="80" y="196" text-anchor="middle" font-family="Arial" font-size="8" fill="rgba(255,255,255,0.7)">Facilitador</text>
+  <text x="80" y="208" text-anchor="middle" font-family="Arial" font-size="7" fill="rgba(255,255,255,0.5)">🇪🇸 España</text>
+  <!-- Connection line from left figure to screen -->
+  <line x1="104" y1="195" x2="160" y2="195" stroke="rgba(0,166,156,0.4)" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- Right side: Portuguese element -->
+  <rect x="548" y="140" width="4" height="120" rx="2" fill="#006600" opacity="0.7"/>
+  <rect x="542" y="140" width="4" height="120" rx="2" fill="#E00020" opacity="0.7"/>
+
+  <!-- Doctor silhouette right -->
+  <circle cx="500" cy="140" r="24" fill="rgba(0,61,143,0.6)" stroke="rgba(0,166,156,0.5)" stroke-width="2"/>
+  <text x="500" y="147" text-anchor="middle" font-size="22">👩‍⚕️</text>
+  <rect x="476" y="170" width="48" height="60" rx="8" fill="rgba(0,61,143,0.5)" stroke="rgba(0,166,156,0.3)" stroke-width="1.5"/>
+  <text x="500" y="196" text-anchor="middle" font-family="Arial" font-size="8" fill="rgba(255,255,255,0.7)">Facilitador</text>
+  <text x="500" y="208" text-anchor="middle" font-family="Arial" font-size="7" fill="rgba(255,255,255,0.5)">🇵🇹 Portugal</text>
+  <!-- Connection line from screen to right figure -->
+  <line x1="420" y1="195" x2="476" y2="195" stroke="rgba(0,166,156,0.4)" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- VR headset icon bottom left -->
+  <rect x="40" y="330" width="70" height="45" rx="10" fill="rgba(0,61,143,0.6)" stroke="rgba(0,166,156,0.4)" stroke-width="1.5"/>
+  <ellipse cx="60" cy="352" rx="12" ry="10" fill="rgba(0,166,156,0.3)" stroke="rgba(0,166,156,0.5)" stroke-width="1"/>
+  <ellipse cx="90" cy="352" rx="12" ry="10" fill="rgba(0,166,156,0.3)" stroke="rgba(0,166,156,0.5)" stroke-width="1"/>
+  <text x="75" y="392" text-anchor="middle" font-family="Arial" font-size="9" fill="rgba(255,255,255,0.5)">Realidade Virtual</text>
+
+  <!-- AI/CPU icon bottom right -->
+  <rect x="468" y="330" width="70" height="45" rx="10" fill="rgba(0,61,143,0.6)" stroke="rgba(244,160,28,0.4)" stroke-width="1.5"/>
+  <rect x="482" y="344" width="42" height="18" rx="4" fill="rgba(244,160,28,0.2)" stroke="rgba(244,160,28,0.5)" stroke-width="1"/>
+  <text x="503" y="356" text-anchor="middle" font-family="monospace" font-size="8" fill="rgba(244,160,28,0.8)">AI ✦</text>
+  <text x="503" y="392" text-anchor="middle" font-family="Arial" font-size="9" fill="rgba(255,255,255,0.5)">Inteligencia Artificial</text>
+
+  <!-- Center bottom: SIM4UE tag -->
+  <rect x="220" y="330" width="140" height="46" rx="10" fill="rgba(0,61,143,0.8)" stroke="rgba(244,160,28,0.5)" stroke-width="1.5"/>
+  <text x="290" y="350" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="900" fill="white">SIM<tspan fill="#f4a01c">4</tspan>UE</text>
+  <text x="290" y="367" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="rgba(255,255,255,0.6)" letter-spacing="0.5">POCTEP · Interreg VI-A</text>
+
+  <!-- Connecting lines (network / cross-border) -->
+  <line x1="110" y1="342" x2="220" y2="342" stroke="rgba(0,166,156,0.25)" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="360" y1="342" x2="468" y2="342" stroke="rgba(0,166,156,0.25)" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="290" y1="286" x2="290" y2="330" stroke="rgba(0,166,156,0.3)" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- Floating data points -->
+  <circle cx="145" cy="80" r="4" fill="#00a69c" opacity="0.6"/>
+  <circle cx="430" cy="100" r="3" fill="#f4a01c" opacity="0.5"/>
+  <circle cx="50" cy="300" r="3" fill="#00a69c" opacity="0.4"/>
+  <circle cx="530" cy="280" r="4" fill="#00a69c" opacity="0.5"/>
+  <circle cx="140" cy="310" r="2.5" fill="#f4a01c" opacity="0.4"/>
+  <circle cx="440" cy="310" r="2.5" fill="#f4a01c" opacity="0.4"/>
+</svg>

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 230">
+  <defs>
+    <!-- Interreg wordmark gradient: periwinkle → dark navy -->
+    <linearGradient id="ig" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#9298C8"/>
+      <stop offset="38%"  stop-color="#5560A0"/>
+      <stop offset="100%" stop-color="#1B3068"/>
+    </linearGradient>
+    <!-- EU 5-pointed star: outer R=4.5, inner r=1.8, pointing up -->
+    <polygon id="s"
+      points="0,-4.5 1.058,-1.456 4.28,-1.39 1.712,0.556 2.645,3.64
+              0,1.8 -2.645,3.64 -1.712,0.556 -4.28,-1.39 -1.058,-1.456"
+      fill="#FFCC00"/>
+  </defs>
+
+  <!-- ── "Interreg" italic bold wordmark ──────────────── -->
+  <text x="2" y="103"
+    font-family="'Arial Rounded MT Bold','Nunito','Varela Round',Arial,Helvetica,sans-serif"
+    font-size="92" font-weight="900" font-style="italic"
+    fill="url(#ig)" letter-spacing="-2">Interreg</text>
+
+  <!-- ── EU Flag ──────────────────────────────────────── -->
+  <!-- rect: x=390 y=10 w=118 h=79  →  center (449, 49.5) -->
+  <rect x="390" y="10" width="118" height="79" fill="#003399"/>
+  <!-- 12 stars on circle R=25, clockwise from top -->
+  <use href="#s" transform="translate(449,24.5)"/>
+  <use href="#s" transform="translate(461.5,27.9)"/>
+  <use href="#s" transform="translate(470.65,37)"/>
+  <use href="#s" transform="translate(474,49.5)"/>
+  <use href="#s" transform="translate(470.65,62)"/>
+  <use href="#s" transform="translate(461.5,71.1)"/>
+  <use href="#s" transform="translate(449,74.5)"/>
+  <use href="#s" transform="translate(436.5,71.1)"/>
+  <use href="#s" transform="translate(427.35,62)"/>
+  <use href="#s" transform="translate(424,49.5)"/>
+  <use href="#s" transform="translate(427.35,37)"/>
+  <use href="#s" transform="translate(436.5,27.9)"/>
+
+  <!-- ── Bilingual "Cofinanciado" text ────────────────── -->
+  <text x="522" y="32"  font-family="Arial,Helvetica,sans-serif" font-size="14.5" font-weight="700" fill="#1B3068">Cofinanciado por</text>
+  <text x="522" y="50"  font-family="Arial,Helvetica,sans-serif" font-size="14.5" font-weight="700" fill="#1B3068">la Unión Europea</text>
+  <text x="522" y="70"  font-family="Arial,Helvetica,sans-serif" font-size="13.5" fill="#1B3068">Cofinanciado pela</text>
+  <text x="522" y="87"  font-family="Arial,Helvetica,sans-serif" font-size="13.5" fill="#1B3068">União Europeia</text>
+
+  <!-- ── Thin separator ───────────────────────────────── -->
+  <line x1="0" y1="117" x2="720" y2="117" stroke="#D0D3E8" stroke-width="1.5"/>
+
+  <!-- ── "España – Portugal" ──────────────────────────── -->
+  <text x="2" y="205"
+    font-family="Arial,Helvetica,sans-serif"
+    font-size="70" font-weight="900"
+    fill="#1B3068" letter-spacing="-1">España – Portugal</text>
+</svg>

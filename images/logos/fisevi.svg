@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 120">
+  <!-- FISEVI logo -->
+  <!-- Outer ring -->
+  <circle cx="60" cy="60" r="54" fill="none" stroke="#00B5AD" stroke-width="3.5"/>
+  <!-- Corner bracket marks at cardinal positions (technical/scientific viewfinder) -->
+  <!-- Top -->
+  <line x1="50" y1="8" x2="60" y2="8" stroke="#00B5AD" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="60" y1="8" x2="70" y2="8" stroke="#00B5AD" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- Bottom -->
+  <line x1="50" y1="112" x2="60" y2="112" stroke="#00B5AD" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="60" y1="112" x2="70" y2="112" stroke="#00B5AD" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- Left -->
+  <line x1="8" y1="50" x2="8" y2="60" stroke="#00B5AD" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="8" y1="60" x2="8" y2="70" stroke="#00B5AD" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- Right -->
+  <line x1="112" y1="50" x2="112" y2="60" stroke="#00B5AD" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="112" y1="60" x2="112" y2="70" stroke="#00B5AD" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- Corner ticks (bracket marks at 45-degree positions) -->
+  <line x1="20" y1="20" x2="27" y2="20" stroke="#00B5AD" stroke-width="3" stroke-linecap="round"/>
+  <line x1="20" y1="20" x2="20" y2="27" stroke="#00B5AD" stroke-width="3" stroke-linecap="round"/>
+  <line x1="100" y1="20" x2="93" y2="20" stroke="#00B5AD" stroke-width="3" stroke-linecap="round"/>
+  <line x1="100" y1="20" x2="100" y2="27" stroke="#00B5AD" stroke-width="3" stroke-linecap="round"/>
+  <line x1="20" y1="100" x2="27" y2="100" stroke="#00B5AD" stroke-width="3" stroke-linecap="round"/>
+  <line x1="20" y1="100" x2="20" y2="93" stroke="#00B5AD" stroke-width="3" stroke-linecap="round"/>
+  <line x1="100" y1="100" x2="93" y2="100" stroke="#00B5AD" stroke-width="3" stroke-linecap="round"/>
+  <line x1="100" y1="100" x2="100" y2="93" stroke="#00B5AD" stroke-width="3" stroke-linecap="round"/>
+  <!-- Central pathogen/star shape -->
+  <path d="M60,42 L63,54 L74,48 L68,58 L80,60 L68,62 L74,72 L63,66 L60,78
+           L57,66 L46,72 L52,62 L40,60 L52,58 L46,48 L57,54 Z"
+        fill="#00B5AD" opacity="0.85"/>
+  <!-- FISEVI text -->
+  <text x="132" y="55" font-family="Arial,Helvetica,sans-serif"
+        font-size="38" font-weight="800" fill="#5A5A5A" letter-spacing="-1">FISE</text>
+  <text x="246" y="55" font-family="Arial,Helvetica,sans-serif"
+        font-size="38" font-weight="800" fill="#5A5A5A">v</text>
+  <text x="264" y="55" font-family="Arial,Helvetica,sans-serif"
+        font-size="38" font-weight="800" fill="#00B5AD">i</text>
+  <text x="132" y="78" font-family="Arial,Helvetica,sans-serif"
+        font-size="9.5" fill="#888" letter-spacing="0.2">Fundación para la Investigación</text>
+  <text x="132" y="91" font-family="Arial,Helvetica,sans-serif"
+        font-size="9.5" fill="#888" letter-spacing="0.2">Sanitaria en Sevilla</text>
+</svg>

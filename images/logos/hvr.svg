@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 270">
+  <!-- Hospital Universitario Virgen del Rocío -->
+  <!-- Green: #3CAA35 (same Junta de Andalucía green) -->
+
+  <!-- ─── TEXT ─────────────────────────────────── -->
+  <text x="18" y="126" font-family="Arial,Helvetica,sans-serif"
+        font-size="20" fill="#5C5C5C" letter-spacing="3.5" font-weight="400">HOSPITAL</text>
+  <text x="18" y="150" font-family="Arial,Helvetica,sans-serif"
+        font-size="20" fill="#5C5C5C" letter-spacing="2" font-weight="400">UNIVERSITARIO</text>
+  <text x="18" y="213" font-family="Arial,Helvetica,sans-serif"
+        font-size="48" fill="#444" font-weight="300" letter-spacing="-0.5">Virgen del Rocío</text>
+
+  <!-- ─── ICON: green architectural tower ──────── -->
+
+  <!-- 1. Spire: very thin pointed triangle -->
+  <polygon points="350,12 344,84 356,84" fill="#3CAA35"/>
+
+  <!-- 2. Sphere / ball at spire base -->
+  <circle cx="350" cy="96" r="11" fill="#3CAA35"/>
+
+  <!-- 3. Arch: two vertical legs + thick semicircular arch top -->
+  <!-- Left leg -->
+  <rect x="310" y="135" width="17" height="48" fill="#3CAA35"/>
+  <!-- Right leg (extends further down → defines right column) -->
+  <rect x="372" y="135" width="17" height="95" fill="#3CAA35"/>
+  <!-- Arch top: thick-stroked semicircle, outer radius ~40, stroke 17 -->
+  <path d="M 310,135 A 40,40 0 0,1 389,135"
+        fill="none" stroke="#3CAA35" stroke-width="17" stroke-linecap="square"/>
+
+  <!-- 4. Left horizontal bracket (extends LEFT from left leg base) -->
+  <rect x="280" y="168" width="47" height="15" fill="#3CAA35"/>
+
+  <!-- 5. Right horizontal bracket (extends RIGHT from right leg) -->
+  <rect x="372" y="168" width="37" height="15" fill="#3CAA35"/>
+
+  <!-- 6. Steps going down-right from right column -->
+  <!-- Step 1: slightly lower, extends right from right leg -->
+  <rect x="372" y="202" width="37" height="14" fill="#3CAA35"/>
+  <!-- Step 2: further down and further right (staircase effect) -->
+  <rect x="390" y="216" width="56" height="14" fill="#3CAA35"/>
+</svg>

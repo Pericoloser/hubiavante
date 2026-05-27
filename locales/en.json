@@ -1,0 +1,223 @@
+{
+  "lang": "en",
+  "nav": {
+    "proyecto": "Project",
+    "socios": "Partners",
+    "actividades": "Activities",
+    "noticias": "News",
+    "contacto": "Contact"
+  },
+  "hero": {
+    "tagline": "Integrated Model for Clinical Simulation Training in Emergency and Critical Care in Cross-Border Environments",
+    "subtitle": "A POCTEP project to transform healthcare training in emergency medicine on both sides of the Spanish-Portuguese border",
+    "btn_proyecto": "Learn about the project",
+    "btn_socios": "View partners"
+  },
+  "stats": {
+    "presupuesto": "Total budget",
+    "subvencion": "EU grant",
+    "socios": "Partners",
+    "duracion": "Project years"
+  },
+  "proyecto": {
+    "title": "The Project",
+    "subtitle": "SIM4UE addresses a shared challenge across cross-border territories",
+    "p1": "SIM4UE is a project co-funded by the Interreg VI-A Spain-Portugal (POCTEP) 2021-2027 programme, responding to the urgent need to improve healthcare in emergency and critical care in the cross-border regions of Spain and Portugal.",
+    "p2": "Through the development of a Virtual Learning Environment for Simulation, SIM4UE integrates innovative pedagogical methodologies, immersive technologies (Virtual Reality, Augmented Reality, Artificial Intelligence) and bilingual training content, with the goal of strengthening the clinical competencies of healthcare professionals and improving cross-border cooperation.",
+    "p3": "The project runs from 1 January 2026 to 31 December 2028, with a total budget of €4,725,090 and the participation of six healthcare and academic institutions from Spain and Portugal.",
+    "obj_title": "Main objectives",
+    "obj1": "Develop a Virtual Learning Environment through Simulation for open health training in emergency and critical care.",
+    "obj2": "Design and deploy a multi-device online tool integrating innovative didactic content, clinical simulations and training resources in Spanish and Portuguese.",
+    "obj3": "Integrate personalised learning pathways, continuous improvement of clinical competencies and cross-border cooperation aimed at improving clinical practice.",
+    "poctep_label": "Project co-funded by",
+    "period_label": "Project period",
+    "period_value": "01/01/2026 – 31/12/2028",
+    "budget_label": "Total budget",
+    "budget_value": "€4,725,090"
+  },
+  "socios": {
+    "title": "Project Partners",
+    "subtitle": "Six leading institutions from Spain and Portugal working together",
+    "lead": "Lead Partner",
+    "partners": [
+      {
+        "ref": "BP",
+        "name": "Fundación Pública Andaluza Progreso y Salud",
+        "abbr": "FPS / IAVANTE",
+        "country": "Spain",
+        "city": "Seville, Andalusia",
+        "budget": "€1,632,951",
+        "role": "Project coordinator",
+        "desc": "Andalusian public institution of reference in healthcare simulation training. IAVANTE is the simulation and educational innovation unit of the Fundación Progreso y Salud.",
+        "flag": "🇪🇸"
+      },
+      {
+        "ref": "BE2",
+        "name": "University of Santiago de Compostela",
+        "abbr": "USC",
+        "country": "Spain",
+        "city": "Santiago de Compostela, Galicia",
+        "budget": "€1,076,345",
+        "role": "Evaluation and impact lead",
+        "desc": "One of the oldest and most prestigious universities in Europe. Leads the comprehensive evaluation studies, impact analysis and dissemination of project results.",
+        "flag": "🇪🇸"
+      },
+      {
+        "ref": "BE3",
+        "name": "Centro Hospitalar de Trás-os-Montes e Alto Douro",
+        "abbr": "CHTMAD",
+        "country": "Portugal",
+        "city": "Vila Real, Portugal",
+        "budget": "€882,543",
+        "role": "Pre-hospital emergency training",
+        "desc": "Reference hospital in northeast Portugal. Leads the design and delivery of training scenarios in pre-hospital emergency and critical care.",
+        "flag": "🇵🇹"
+      },
+      {
+        "ref": "BE4",
+        "name": "Hospital Virgen del Rocío",
+        "abbr": "HVR",
+        "country": "Spain",
+        "city": "Seville, Andalusia",
+        "budget": "€157,953",
+        "role": "Obstetric emergency training",
+        "desc": "High-complexity university hospital with national and international reference. Responsible for designing and implementing simulation scenarios for obstetric emergencies.",
+        "flag": "🇪🇸"
+      },
+      {
+        "ref": "BE5",
+        "name": "Centro Hospitalar e Universitário de Coimbra",
+        "abbr": "CHUC",
+        "country": "Portugal",
+        "city": "Coimbra, Portugal",
+        "budget": "€692,895",
+        "role": "Hospital emergency training",
+        "desc": "Leading hospital and university centre in Portugal. Leads the design, validation and delivery of training scenarios for hospital emergencies.",
+        "flag": "🇵🇹"
+      },
+      {
+        "ref": "BE6",
+        "name": "Junta de Andalucía – FISEVI",
+        "abbr": "FISEVI",
+        "country": "Spain",
+        "city": "Seville, Andalusia",
+        "budget": "€282,400",
+        "role": "Shared simulation model",
+        "desc": "Foundation for Health Research in Seville (FISEVI). Collaborates in the development of the shared model for training clinical simulation facilitators.",
+        "flag": "🇪🇸"
+      }
+    ]
+  },
+  "actividades": {
+    "title": "Project Activities",
+    "subtitle": "Six structured activities to transform cross-border healthcare training",
+    "items": [
+      {
+        "id": "A1",
+        "title": "Virtual Learning Environment",
+        "period": "01/01/2026 – 31/12/2027",
+        "lead": "FPS / IAVANTE",
+        "desc": "Development of a multi-device online platform with innovative didactic content, clinical simulations, immersive technologies (VR, AR, AI) and personalised learning pathways in Spanish and Portuguese.",
+        "deliverable": "Operational and validated online platform"
+      },
+      {
+        "id": "A2",
+        "title": "Shared Simulation Model",
+        "period": "01/01/2026 – 30/04/2027",
+        "lead": "FPS, FISEVI, CHTMAD, CHUC",
+        "desc": "Development of a common competency framework and pedagogical objectives, design of the course model for initial facilitator training and delivery of 5 editions.",
+        "deliverable": "Unified and replicable educational model"
+      },
+      {
+        "id": "A3",
+        "title": "Adult Emergency Training",
+        "period": "01/06/2026 – 31/12/2028",
+        "lead": "CHUC, CHTMAD, USC",
+        "desc": "Design, validation and delivery of training scenarios in hospital emergencies and pre-hospital care, with comprehensive evaluation and impact analysis.",
+        "deliverable": "82 training editions"
+      },
+      {
+        "id": "A4",
+        "title": "Paediatric & Obstetric Emergencies",
+        "period": "01/06/2026 – 31/12/2028",
+        "lead": "USC, HVR",
+        "desc": "Design, piloting and implementation of simulation scenarios for paediatric and obstetric emergencies, with comprehensive evaluation and dissemination of results.",
+        "deliverable": "125 training editions"
+      },
+      {
+        "id": "A5",
+        "title": "Management & Coordination",
+        "period": "01/01/2026 – 31/12/2028",
+        "lead": "FPS / IAVANTE",
+        "desc": "Progress monitoring and reporting, management of protocols and internal communication channels, implementation of a Risk Management and Quality Assurance Plan.",
+        "deliverable": "Management reports and protocols"
+      },
+      {
+        "id": "A6",
+        "title": "Visibility, Transparency & Communication",
+        "period": "01/01/2026 – 31/12/2028",
+        "lead": "FPS / IAVANTE",
+        "desc": "Communication plan and social media presence, identification of transferability to other European regions.",
+        "deliverable": "Communication plan and project website"
+      }
+    ]
+  },
+  "noticias": {
+    "title": "News",
+    "subtitle": "Latest updates from the SIM4UE project",
+    "items": [
+      {
+        "date": "6 February 2026",
+        "tag": "Meeting",
+        "title": "SIM4UE project kick-off meeting",
+        "desc": "Project partners gather at the launch meeting to establish the work plan, milestones and project roadmap for the next three years.",
+        "img": "news1"
+      },
+      {
+        "date": "January 2026",
+        "tag": "Launch",
+        "title": "SIM4UE officially launches",
+        "desc": "The SIM4UE project officially starts on 1 January 2026, supported by the Interreg VI-A Spain-Portugal (POCTEP) programme and with the participation of six cross-border partners.",
+        "img": "news2"
+      },
+      {
+        "date": "Coming soon",
+        "tag": "Platform",
+        "title": "Pedagogical Architecture Design",
+        "desc": "In the coming weeks, the FPS/IAVANTE team will begin a comparative analysis of clinical simulation platforms and tools at European and international level.",
+        "img": "news3"
+      }
+    ]
+  },
+  "contacto": {
+    "title": "Contact",
+    "subtitle": "Do you have questions about the SIM4UE project?",
+    "form": {
+      "name": "Name",
+      "email": "Email address",
+      "org": "Organisation",
+      "message": "Message",
+      "send": "Send message",
+      "success": "Message sent successfully! We will get in touch with you shortly.",
+      "required": "Please fill in all required fields."
+    },
+    "coord_title": "Coordinating institution",
+    "coord_name": "Fundación Pública Andaluza Progreso y Salud",
+    "coord_unit": "IAVANTE Unit – Simulation and Educational Innovation",
+    "coord_address": "Avda. de la Innovación, s/n · Health Technology Park · 18016 Granada, Spain",
+    "coord_email": "sim4ue@iavante.es",
+    "social_title": "Follow us"
+  },
+  "footer": {
+    "funded": "Co-funded by the European Union through the Interreg VI-A Spain-Portugal (POCTEP) 2021-2027 programme. The content of this website is the sole responsibility of the SIM4UE consortium and does not necessarily reflect the opinion of the European Union.",
+    "rights": "© 2026 SIM4UE. All rights reserved.",
+    "privacy": "Privacy policy",
+    "legal": "Legal notice",
+    "cookies": "Cookies"
+  },
+  "cookie": {
+    "text": "This website uses cookies to improve your experience. By continuing to browse, you accept their use.",
+    "accept": "Accept",
+    "more": "Learn more"
+  }
+}
