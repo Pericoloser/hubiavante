@@ -49,6 +49,20 @@
   status = 301
   force  = true
 
+# Also redirect http → https (Netlify handles this automatically,
+# but this explicit rule ensures no mixed content)
+[[redirects]]
+  from  = "http://sim4ue.eu/*"
+  to    = "https://www.sim4ue.eu/:splat"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from  = "http://www.sim4ue.eu/*"
+  to    = "https://www.sim4ue.eu/:splat"
+  status = 301
+  force  = true
+
 # Netlify Forms spam filter (optional – if using Netlify Forms instead of Formspree)
 # [[redirects]]
 #   from  = "/contact"
