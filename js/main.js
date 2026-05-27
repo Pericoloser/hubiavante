@@ -3,6 +3,26 @@
  * Multilingüe ES/PT/GL/EN · POCTEP
  */
 
+/* ── Config ─────────────────────────────────────────────── */
+// Formspree: replace with your form ID from https://formspree.io
+// 1. Create a free account at formspree.io
+// 2. Click "New Form" → give it a name → copy the form ID (e.g. "xpwzlkno")
+// 3. Replace "YOUR_FORM_ID" below with your actual ID
+const FORMSPREE_ID = 'YOUR_FORM_ID';
+const FORMSPREE_ENDPOINT = FORMSPREE_ID !== 'YOUR_FORM_ID'
+  ? `https://formspree.io/f/${FORMSPREE_ID}`
+  : null; // if null, will simulate send (demo mode)
+
+/* ── Logo map ───────────────────────────────────────────── */
+const PARTNER_LOGOS = {
+  'BP':  'images/logos/fps.svg',
+  'BE2': 'images/logos/usc.svg',
+  'BE3': 'images/logos/chtmad.svg',
+  'BE4': 'images/logos/hvr.svg',
+  'BE5': 'images/logos/chuc.svg',
+  'BE6': 'images/logos/fisevi.svg',
+};
+
 /* ── State ─────────────────────────────────────────────── */
 let currentLang = 'es';
 let translations = {};
@@ -58,6 +78,7 @@ async function setLanguage(lang) {
   renderProyecto(t);
   renderPartners(t);
   renderActivities(t);
+  renderGantt(t);
   renderNews(t);
   renderContact(t);
   renderFooter(t);
@@ -99,8 +120,13 @@ function renderPartners(t) {
 
   container.innerHTML = s.partners.map((p, i) => {
     const isLead = p.ref === 'BP';
+    const logoSrc = PARTNER_LOGOS[p.ref];
+    const logoEl = logoSrc
+      ? `<img src="${logoSrc}" alt="${p.name}" loading="lazy"/>`
+      : `<span class="partner-logo-placeholder">${p.abbr}</span>`;
     return `
     <article class="partner-card ${isLead ? 'lead-card' : ''} reveal reveal-delay-${(i % 4) + 1}">
+      <div class="partner-logo-wrap">${logoEl}</div>
       <div class="partner-header">
         <div class="partner-ref">${p.ref}</div>
         <div>
@@ -169,12 +195,19 @@ function renderNews(t) {
   const container = document.getElementById('news-grid');
   if (!container) return;
 
-  const imgClass = ['news-img-1', 'news-img-2', 'news-img-3'];
-  const imgEmoji = ['🚑', '🏥', '💻'];
+  const newsSvgs = [
+    'images/news-1.svg',
+    'images/news-2.svg',
+    'images/news-3.svg',
+  ];
 
   container.innerHTML = n.items.map((item, i) => `
     <article class="news-card reveal reveal-delay-${i + 1}">
-      <div class="news-img ${imgClass[i % 3]}">${imgEmoji[i % 3]}</div>
+      <div class="news-img" style="padding:0;overflow:hidden">
+        <img src="${newsSvgs[i % 3]}" alt="${item.title}"
+             style="width:100%;height:180px;object-fit:cover;border-radius:0;display:block"
+             loading="lazy"/>
+      </div>
       <div class="news-body">
         <div class="news-meta">
           <span class="news-tag">${item.tag}</span>
@@ -406,24 +439,191 @@ function initContactForm() {
     const btn = form.querySelector('#form-submit');
     if (!t) return;
 
-    // Simple validation
+    // Validation
     const required = form.querySelectorAll('[required]');
     let valid = true;
-    required.forEach(f => { if (!f.value.trim()) { f.style.borderColor = '#e63127'; valid = false; }
-      else f.style.borderColor = ''; });
+    required.forEach(f => {
+      if (!f.value.trim()) { f.style.borderColor = '#e63127'; valid = false; }
+      else f.style.borderColor = '';
+    });
 
     if (!valid) {
       if (msg) { msg.className = 'form-message error'; msg.textContent = t.contacto.form.required; }
       return;
     }
 
-    // Simulate send
-    if (btn) btn.disabled = true;
-    await new Promise(r => setTimeout(r, 1200));
-    if (msg) { msg.className = 'form-message success'; msg.textContent = t.contacto.form.success; }
-    form.reset();
-    if (btn) btn.disabled = false;
+    if (btn) { btn.disabled = true; btn.textContent = '⏳ Enviando...'; }
+
+    if (FORMSPREE_ENDPOINT) {
+      // Real send via Formspree
+      try {
+        const formData = new FormData(form);
+        const res = await fetch(FORMSPREE_ENDPOINT, {
+          method: 'POST', body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          if (msg) { msg.className = 'form-message success'; msg.textContent = t.contacto.form.success; }
+          form.reset();
+        } else {
+          throw new Error('Server error');
+        }
+      } catch (err) {
+        if (msg) { msg.className = 'form-message error'; msg.textContent = 'Error al enviar. Inténtalo de nuevo o escríbenos a sim4ue@iavante.es'; }
+      }
+    } else {
+      // Demo mode (no Formspree configured yet)
+      await new Promise(r => setTimeout(r, 1200));
+      if (msg) { msg.className = 'form-message success'; msg.textContent = t.contacto.form.success + ' (Demo – configura Formspree para envío real)'; }
+      form.reset();
+    }
+
+    if (btn) { btn.disabled = false; btn.textContent = t.contacto.form.send || 'Enviar mensaje'; }
   });
+}
+
+/* ── Gantt Chart ────────────────────────────────────────── */
+function renderGantt(t) {
+  const table = document.getElementById('gantt-table');
+  const legend = document.getElementById('gantt-legend');
+  const todayNote = document.getElementById('gantt-today-note');
+  if (!table || !t.actividades) return;
+
+  // Project timeline: Jan 2026 → Dec 2028 (36 months)
+  const START = new Date(2026, 0, 1);
+  const END   = new Date(2028, 11, 31);
+  const TODAY = new Date(); // May 2026 approximately
+
+  // Build month array
+  const months = [];
+  let cur = new Date(START);
+  while (cur <= END) {
+    months.push({ year: cur.getFullYear(), month: cur.getMonth() });
+    cur = new Date(cur.getFullYear(), cur.getMonth() + 1, 1);
+  }
+  const TOTAL = months.length; // 36
+
+  // Today column index
+  const todayIdx = months.findIndex(m =>
+    m.year === TODAY.getFullYear() && m.month === TODAY.getMonth());
+
+  // Month abbreviations by lang
+  const MON_LABELS = {
+    es: ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'],
+    pt: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'],
+    gl: ['Xan','Feb','Mar','Abr','Mai','Xuñ','Xul','Ago','Set','Out','Nov','Dec'],
+    en: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+  };
+  const MON = MON_LABELS[currentLang] || MON_LABELS.es;
+
+  // Activity date ranges
+  const ACT_RANGES = [
+    { id: 'A1', start: new Date(2026,0,1),  end: new Date(2027,11,31), cls: 'g-a1' },
+    { id: 'A2', start: new Date(2026,0,1),  end: new Date(2027,3,30),  cls: 'g-a2' },
+    { id: 'A3', start: new Date(2026,5,1),  end: new Date(2028,11,31), cls: 'g-a3' },
+    { id: 'A4', start: new Date(2026,5,1),  end: new Date(2028,11,31), cls: 'g-a4' },
+    { id: 'A5', start: new Date(2026,0,1),  end: new Date(2028,11,31), cls: 'g-a5' },
+    { id: 'A6', start: new Date(2026,0,1),  end: new Date(2028,11,31), cls: 'g-a6' },
+  ];
+
+  const actItems = t.actividades.items || [];
+
+  // Build year spans for header
+  const years = [2026, 2027, 2028];
+  const yearSpans = years.map(y => months.filter(m => m.year === y).length);
+
+  // Header rows
+  let thead = '<thead>';
+  // Row 1: label + year spans
+  thead += '<tr><th rowspan="2" style="text-align:left;min-width:170px;background:rgba(0,61,143,.95)">Actividad</th>';
+  years.forEach((y, i) => {
+    thead += `<th colspan="${yearSpans[i]}">${y}</th>`;
+  });
+  thead += '</tr>';
+  // Row 2: month labels
+  thead += '<tr>';
+  months.forEach((m, i) => {
+    const isToday = i === todayIdx;
+    thead += `<th class="${isToday ? 'today-col' : ''}" title="${MON[m.month]} ${m.year}">${MON[m.month]}</th>`;
+  });
+  thead += '</tr></thead>';
+
+  // Body rows
+  let tbody = '<tbody>';
+  ACT_RANGES.forEach((act, idx) => {
+    const item = actItems[idx] || {};
+    const name = item.title || act.id;
+    const colorCls = act.cls;
+    tbody += '<tr>';
+    // Label
+    tbody += `<td class="gantt-label-col">
+      <span class="act-id ${colorCls}" style="color:white">${act.id}</span>
+      <span class="act-name">${name}</span>
+    </td>`;
+    // Month cells
+    months.forEach((m, i) => {
+      const cellDate = new Date(m.year, m.month, 1);
+      const cellEnd  = new Date(m.year, m.month + 1, 0);
+      const inRange  = cellDate <= act.end && cellEnd >= act.start;
+      const isToday  = i === todayIdx;
+      // Is it the first cell of a run?
+      const prevInRange = i > 0 ? (() => {
+        const pm = months[i-1];
+        const pd = new Date(pm.year, pm.month, 1);
+        const pe = new Date(pm.year, pm.month + 1, 0);
+        return pd <= act.end && pe >= act.start;
+      })() : false;
+
+      if (inRange) {
+        const isFirst = !prevInRange;
+        tbody += `<td class="gantt-cell active-cell${isToday ? ' today-col' : ''}">
+          ${isToday ? '<div class="gantt-today-line"></div>' : ''}
+          ${isFirst ? `<div class="gantt-bar ${colorCls}"></div>` : `<div class="gantt-bar ${colorCls}" style="border-radius:0"></div>`}
+        </td>`;
+      } else {
+        tbody += `<td class="gantt-cell${isToday ? ' today-col' : ''}">
+          ${isToday ? '<div class="gantt-today-line" style="background:var(--red);opacity:.5"></div>' : ''}
+        </td>`;
+      }
+    });
+    tbody += '</tr>';
+  });
+  tbody += '</tbody>';
+
+  table.innerHTML = thead + tbody;
+
+  // Legend
+  if (legend) {
+    const colors = [
+      { cls: 'g-a1', label: 'A1' }, { cls: 'g-a2', label: 'A2' },
+      { cls: 'g-a3', label: 'A3' }, { cls: 'g-a4', label: 'A4' },
+      { cls: 'g-a5', label: 'A5' }, { cls: 'g-a6', label: 'A6' },
+    ];
+    legend.innerHTML = colors.map((c, i) => {
+      const name = actItems[i]?.title || c.label;
+      return `<div class="gantt-legend-item">
+        <div class="gantt-legend-dot ${c.cls}"></div>
+        <span><strong>${c.label}</strong> · ${name}</span>
+      </div>`;
+    }).join('');
+  }
+
+  // Today label
+  if (todayNote) {
+    const todayLabel = { es:'Hoy', pt:'Hoje', gl:'Hoxe', en:'Today' }[currentLang] || 'Hoy';
+    todayNote.innerHTML = `${todayLabel} (${TODAY.toLocaleDateString(currentLang === 'en' ? 'en-GB' : currentLang + '-ES', {month:'short', year:'numeric'})})`;
+  }
+
+  // Update gantt titles
+  const titles = {
+    es: { h: 'Cronograma del proyecto', p: 'Distribución temporal de actividades · Enero 2026 – Diciembre 2028' },
+    pt: { h: 'Cronograma do projeto',   p: 'Distribuição temporal das atividades · Janeiro 2026 – Dezembro 2028' },
+    gl: { h: 'Cronograma do proxecto',  p: 'Distribución temporal das actividades · Xaneiro 2026 – Decembro 2028' },
+    en: { h: 'Project timeline',        p: 'Activity schedule · January 2026 – December 2028' },
+  };
+  const gt = titles[currentLang] || titles.es;
+  setElText('#gantt-title', gt.h);
+  setElText('#gantt-subtitle', gt.p);
 }
 
 /* ── Init ───────────────────────────────────────────────── */

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 290">
+  <!-- Junta de Andalucía / FPS / IAVANTE -->
+  <!-- Left leg of the A -->
+  <polygon points="8,208 40,208 112,14 80,14" fill="#3CAA35"/>
+  <!-- Right leg of the A -->
+  <polygon points="108,14 140,14 212,208 180,208" fill="#3CAA35"/>
+  <!-- Curved crossbar / ribbon -->
+  <path d="M 53,130 C 80,108 140,108 167,130 L 162,148 C 136,128 84,128 58,148 Z" fill="#2A8526"/>
+  <!-- Text group -->
+  <text x="110" y="235" text-anchor="middle" font-family="Arial,Helvetica,sans-serif"
+        font-size="15" font-weight="800" fill="#1A1A1A">Junta de Andalucía</text>
+  <text x="110" y="253" text-anchor="middle" font-family="Arial,Helvetica,sans-serif"
+        font-size="8.5" fill="#444">Consejería de Sanidad, Presidencia</text>
+  <text x="110" y="264" text-anchor="middle" font-family="Arial,Helvetica,sans-serif"
+        font-size="8.5" fill="#444">y Emergencias</text>
+  <text x="110" y="279" text-anchor="middle" font-family="Arial,Helvetica,sans-serif"
+        font-size="8" fill="#555">Fundación Pública Andaluza Progreso y Salud</text>
+</svg>

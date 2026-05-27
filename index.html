@@ -130,29 +130,10 @@
           </div>
         </div>
 
-        <!-- Visual card -->
+        <!-- Visual: illustration -->
         <div class="hero-visual" aria-hidden="true">
-          <div class="hero-card">
-            <div class="hero-card-title">SIM4UE · 2026–2028</div>
-            <div class="hero-stats-grid">
-              <div class="hero-stat">
-                <div class="val gold">4,7M€</div>
-                <div class="lbl">Presupuesto</div>
-              </div>
-              <div class="hero-stat">
-                <div class="val teal">75%</div>
-                <div class="lbl">UE FEDER</div>
-              </div>
-              <div class="hero-stat">
-                <div class="val">6</div>
-                <div class="lbl">Socios</div>
-              </div>
-              <div class="hero-stat">
-                <div class="val teal">207</div>
-                <div class="lbl">Ediciones</div>
-              </div>
-            </div>
-          </div>
+          <img src="images/hero-illustration.svg" alt="Ilustración simulación clínica transfronteriza SIM4UE"
+               width="580" height="420" style="border-radius:var(--radius);width:100%;max-width:540px;box-shadow:0 24px 64px rgba(0,0,0,.35)"/>
         </div>
       </div>
 
@@ -186,6 +167,33 @@
             <div class="stat-val" data-counter="3" aria-label="3 años">3</div>
             <div class="stat-lbl" data-stat="duracion">Años de proyecto</div>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── LOGOS STRIP ────────────────────────────────── -->
+    <div class="logos-strip" role="region" aria-label="Socios del proyecto">
+      <div class="container">
+        <p class="logos-strip-title">Consorcio de socios · 2026-2028</p>
+        <div class="logos-strip-grid">
+          <a href="#socios" class="logo-strip-item" title="FPS / IAVANTE – Socio líder">
+            <img src="images/logos/fps.svg" alt="Fundación Pública Andaluza Progreso y Salud – IAVANTE" loading="lazy"/>
+          </a>
+          <a href="#socios" class="logo-strip-item" title="USC – Universidade de Santiago de Compostela">
+            <img src="images/logos/usc.svg" alt="Universidade de Santiago de Compostela" loading="lazy"/>
+          </a>
+          <a href="#socios" class="logo-strip-item" title="CHTMAD – Centro Hospitalar Trás-os-Montes e Alto Douro">
+            <img src="images/logos/chtmad.svg" alt="Centro Hospitalar de Trás-os-Montes e Alto Douro" loading="lazy"/>
+          </a>
+          <a href="#socios" class="logo-strip-item" title="HVR – Hospital Virgen del Rocío">
+            <img src="images/logos/hvr.svg" alt="Hospital Universitario Virgen del Rocío" loading="lazy"/>
+          </a>
+          <a href="#socios" class="logo-strip-item" title="CHUC – Centro Hospitalar e Universitário de Coimbra">
+            <img src="images/logos/chuc.svg" alt="Centro Hospitalar e Universitário de Coimbra" loading="lazy"/>
+          </a>
+          <a href="#socios" class="logo-strip-item" title="FISEVI – Fundación para la Investigación Sanitaria en Sevilla">
+            <img src="images/logos/fisevi.svg" alt="FISEVI – Fundación para la Investigación Sanitaria en Sevilla" loading="lazy"/>
+          </a>
         </div>
       </div>
     </div>
@@ -290,6 +298,19 @@
         <div id="activities-grid" class="activities-grid">
           <!-- Rendered by JS -->
         </div>
+
+        <!-- Gantt Chart -->
+        <div class="gantt-section reveal">
+          <h3 id="gantt-title">Cronograma del proyecto</h3>
+          <p id="gantt-subtitle">Distribución temporal de actividades · Enero 2026 – Diciembre 2028</p>
+          <div class="gantt-wrap">
+            <table class="gantt-table" id="gantt-table" aria-label="Cronograma Gantt del proyecto SIM4UE">
+              <!-- Rendered by JS -->
+            </table>
+          </div>
+          <div class="gantt-legend" id="gantt-legend"><!-- Rendered by JS --></div>
+          <div class="gantt-today-note" id="gantt-today-note">Hoy</div>
+        </div>
       </div>
     </section>
 
@@ -359,6 +380,8 @@
 
           <!-- Form -->
           <div class="contact-form reveal reveal-delay-1">
+            <!-- Formspree: replace YOUR_FORM_ID with your actual Formspree form ID -->
+            <!-- Register free at https://formspree.io → New Form → copy the ID -->
             <form id="contact-form" novalidate>
               <div class="form-row">
                 <div class="form-group">

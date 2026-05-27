@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240">
+  <!-- CHTMAD - Centro Hospitalar Trás-os-Montes e Alto Douro -->
+  <!-- Heart shape with topographic/wood-grain contour lines -->
+  <!-- Outer heart boundary (clipping) -->
+  <defs>
+    <clipPath id="heart-clip">
+      <path d="M 100,190 C 100,190 20,140 20,85 C 20,55 42,35 65,35 C 80,35 95,45 100,55
+               C 105,45 120,35 135,35 C 158,35 180,55 180,85 C 180,140 100,190 100,190 Z"/>
+    </clipPath>
+  </defs>
+  <!-- Background heart fill -->
+  <path d="M 100,190 C 100,190 20,140 20,85 C 20,55 42,35 65,35 C 80,35 95,45 100,55
+           C 105,45 120,35 135,35 C 158,35 180,55 180,85 C 180,140 100,190 100,190 Z"
+        fill="#F5EFE6"/>
+  <!-- Topographic contour lines inside heart (concentric, organic) -->
+  <g clip-path="url(#heart-clip)" fill="none" stroke="#5C3317" stroke-width="1.8">
+    <path d="M 100,175 C 100,175 32,128 32,82 C 32,60 50,43 68,43 C 82,43 94,52 100,62 C 106,52 118,43 132,43 C 150,43 168,60 168,82 C 168,128 100,175 100,175 Z" opacity="0.9"/>
+    <path d="M 100,160 C 100,160 45,118 45,80 C 45,63 58,50 72,50 C 84,50 95,58 100,68 C 105,58 116,50 128,50 C 142,50 155,63 155,80 C 155,118 100,160 100,160 Z" opacity="0.85"/>
+    <path d="M 100,144 C 100,144 58,108 58,78 C 58,66 67,57 77,57 C 87,57 96,64 100,73 C 104,64 113,57 123,57 C 133,57 142,66 142,78 C 142,108 100,144 100,144 Z" opacity="0.8"/>
+    <path d="M 100,128 C 100,128 70,98 70,76 C 70,68 76,62 83,62 C 90,62 97,69 100,76 C 103,69 110,62 117,62 C 124,62 130,68 130,76 C 130,98 100,128 100,128 Z" opacity="0.75"/>
+    <path d="M 100,112 C 100,112 80,90 80,74 C 80,70 84,67 88,67 C 93,67 98,72 100,78 C 102,72 107,67 112,67 C 116,67 120,70 120,74 C 120,90 100,112 100,112 Z" opacity="0.7"/>
+    <path d="M 100,96 C 100,96 88,82 88,74 C 88,72 90,70 93,70 C 96,70 99,73 100,77 C 101,73 104,70 107,70 C 110,70 112,72 112,74 C 112,82 100,96 100,96 Z" opacity="0.65"/>
+  </g>
+  <!-- Green center dot -->
+  <circle cx="100" cy="115" r="12" fill="#4DB840" opacity="0.85"/>
+  <circle cx="100" cy="115" r="7" fill="#5CC94F"/>
+  <!-- Outer heart stroke -->
+  <path d="M 100,190 C 100,190 20,140 20,85 C 20,55 42,35 65,35 C 80,35 95,45 100,55
+           C 105,45 120,35 135,35 C 158,35 180,55 180,85 C 180,140 100,190 100,190 Z"
+        fill="none" stroke="#5C3317" stroke-width="2.5"/>
+  <!-- Text -->
+  <text x="100" y="213" text-anchor="middle" font-family="Arial,Helvetica,sans-serif"
+        font-size="13" fill="#5C3317" letter-spacing="1">
+    <tspan font-weight="700">ch</tspan><tspan> tmad</tspan>
+  </text>
+  <text x="100" y="230" text-anchor="middle" font-family="Arial,Helvetica,sans-serif"
+        font-size="7.5" fill="#7A5040" letter-spacing="0.3">Centro Hospitalar Trás-os-Montes e Alto Douro</text>
+</svg>

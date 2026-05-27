@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220">
+  <!-- News 2: Project launch -->
+  <defs>
+    <linearGradient id="n2bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#004d40"/>
+      <stop offset="100%" stop-color="#00697a"/>
+    </linearGradient>
+  </defs>
+  <rect width="420" height="220" rx="8" fill="url(#n2bg)"/>
+  <!-- Star burst / launch effect -->
+  <g stroke="rgba(244,160,28,0.3)" stroke-width="1" fill="none">
+    <line x1="210" y1="90" x2="210" y2="30"/>
+    <line x1="210" y1="90" x2="260" y2="50"/>
+    <line x1="210" y1="90" x2="290" y2="90"/>
+    <line x1="210" y1="90" x2="260" y2="130"/>
+    <line x1="210" y1="90" x2="160" y2="130"/>
+    <line x1="210" y1="90" x2="130" y2="90"/>
+    <line x1="210" y1="90" x2="160" y2="50"/>
+  </g>
+  <!-- Central rocket/launch icon -->
+  <text x="210" y="108" text-anchor="middle" font-size="52">🚀</text>
+  <!-- EU stars ring -->
+  <g fill="#f4a01c" font-size="10">
+    <text x="210" y="36" text-anchor="middle">★</text>
+    <text x="240" y="44" text-anchor="middle">★</text>
+    <text x="258" y="68" text-anchor="middle">★</text>
+    <text x="255" y="100" text-anchor="middle">★</text>
+    <text x="240" y="126" text-anchor="middle">★</text>
+    <text x="210" y="136" text-anchor="middle">★</text>
+    <text x="180" y="126" text-anchor="middle">★</text>
+    <text x="165" y="100" text-anchor="middle">★</text>
+    <text x="162" y="68" text-anchor="middle">★</text>
+    <text x="180" y="44" text-anchor="middle">★</text>
+    <text x="250" y="56" text-anchor="middle">★</text>
+    <text x="170" y="56" text-anchor="middle">★</text>
+  </g>
+  <!-- Text -->
+  <text x="210" y="158" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="800" fill="white">SIM4UE ARRANCA</text>
+  <text x="210" y="177" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="rgba(255,255,255,0.7)">1 de enero de 2026 · Inicio oficial del proyecto</text>
+  <!-- Bottom bar -->
+  <rect x="0" y="190" width="420" height="30" rx="0" fill="rgba(0,0,0,0.25)"/>
+  <text x="20" y="209" font-family="Arial,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.5)">6 socios · España y Portugal · 4.725.090 €</text>
+  <text x="400" y="209" text-anchor="end" font-family="monospace" font-size="10" fill="rgba(244,160,28,0.8)">SIM4UE</text>
+</svg>

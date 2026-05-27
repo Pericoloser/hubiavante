@@ -454,6 +454,88 @@ footer { background: var(--primary-dk); color: rgba(255,255,255,.75); padding: 0
 .cookie-more:hover { color: var(--white); border-color: rgba(255,255,255,.5); }
 
 /* ============================================================
+   PARTNER LOGO DISPLAY IN CARDS
+   ============================================================ */
+.partner-logo-wrap { height: 80px; display: flex; align-items: center;
+  justify-content: center; padding: 1rem 1.25rem; background: var(--white);
+  border-bottom: 1px solid var(--border); }
+.partner-logo-wrap img { max-height: 66px; max-width: 180px;
+  width: auto; height: auto; object-fit: contain; filter: none;
+  transition: filter var(--transition); }
+.partner-card:hover .partner-logo-wrap img { filter: none; }
+.partner-logo-placeholder { font-size: 2rem; font-weight: 900;
+  color: var(--primary); letter-spacing: -.03em; }
+
+/* ============================================================
+   LOGOS STRIP SECTION
+   ============================================================ */
+.logos-strip { background: var(--white); padding: 2.5rem 0;
+  border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.logos-strip-title { font-size: .75rem; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--text-light); text-align: center;
+  margin-bottom: 1.75rem; }
+.logos-strip-grid { display: flex; flex-wrap: wrap; align-items: center;
+  justify-content: center; gap: 2rem 3rem; }
+.logo-strip-item { display: flex; align-items: center; justify-content: center;
+  height: 56px; width: 160px; transition: filter var(--transition), opacity var(--transition); }
+.logo-strip-item img { max-height: 52px; max-width: 155px;
+  width: auto; height: auto; object-fit: contain; }
+.logo-strip-item:hover { opacity: .85; }
+
+/* ============================================================
+   GANTT / TIMELINE CHART
+   ============================================================ */
+.gantt-section { margin-top: 4rem; }
+.gantt-section h3 { font-size: 1.25rem; font-weight: 800; color: var(--primary);
+  margin-bottom: .5rem; }
+.gantt-section p { font-size: .9rem; color: var(--text-mid); margin-bottom: 1.75rem; }
+.gantt-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--border); border-radius: var(--radius); }
+.gantt-table { width: 100%; min-width: 780px; border-collapse: collapse;
+  font-size: .82rem; }
+.gantt-table thead tr:first-child th { background: var(--primary); color: var(--white);
+  font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em;
+  padding: .6rem .5rem; text-align: center; border: 1px solid rgba(255,255,255,.15); }
+.gantt-table thead tr:last-child th { background: rgba(0,61,143,.06); color: var(--text-light);
+  font-size: .68rem; font-weight: 600; text-transform: uppercase; letter-spacing: .04em;
+  padding: .4rem .25rem; text-align: center; border: 1px solid var(--border);
+  width: 28px; min-width: 22px; }
+.gantt-table thead tr:last-child th.year-label { width: auto; min-width: auto; }
+.gantt-label-col { background: var(--light); padding: .75rem 1rem; font-weight: 700;
+  color: var(--primary); white-space: nowrap; border: 1px solid var(--border);
+  min-width: 160px; vertical-align: middle; }
+.gantt-label-col .act-id { display: inline-block; width: 28px; height: 28px;
+  border-radius: 6px; font-size: .75rem; font-weight: 900; line-height: 28px;
+  text-align: center; margin-right: .5rem; vertical-align: middle; }
+.gantt-label-col .act-name { font-size: .8rem; font-weight: 700; }
+.gantt-cell { padding: 3px 2px; border: 1px solid var(--border);
+  position: relative; vertical-align: middle; }
+.gantt-cell.active-cell { padding: 0; }
+.gantt-bar { height: 24px; border-radius: 4px; display: flex; align-items: center;
+  justify-content: center; font-size: .65rem; font-weight: 700; color: white;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding: 0 .3rem; }
+.gantt-cell.today-col { background: rgba(230,49,39,.06); }
+.gantt-today-line { position: absolute; top: 0; bottom: 0; left: 50%;
+  width: 2px; background: var(--red); opacity: .7; z-index: 2; }
+.gantt-cell.today-col .gantt-bar { box-shadow: 0 0 0 1px rgba(230,49,39,.3); }
+/* Activity color map */
+.g-a1 { background: linear-gradient(90deg, var(--primary), #0056b3); }
+.g-a2 { background: linear-gradient(90deg, var(--accent-dk), var(--accent)); }
+.g-a3 { background: linear-gradient(90deg, #e67e00, #f4a01c); }
+.g-a4 { background: linear-gradient(90deg, var(--red), #e05050); }
+.g-a5 { background: linear-gradient(90deg, #6b21a8, #9333ea); }
+.g-a6 { background: linear-gradient(90deg, #15803d, #22c55e); }
+.gantt-legend { display: flex; flex-wrap: wrap; gap: .6rem 1.25rem;
+  margin-top: 1rem; justify-content: flex-start; }
+.gantt-legend-item { display: flex; align-items: center; gap: .4rem;
+  font-size: .78rem; color: var(--text-mid); }
+.gantt-legend-dot { width: 12px; height: 12px; border-radius: 3px; }
+.gantt-today-note { display: flex; align-items: center; gap: .4rem;
+  font-size: .78rem; color: var(--red); margin-top: .5rem; }
+.gantt-today-note::before { content: ''; display: inline-block;
+  width: 12px; height: 3px; background: var(--red); border-radius: 2px; }
+
+/* ============================================================
    BACK TO TOP
    ============================================================ */
 .back-to-top { position: fixed; bottom: 2rem; right: 1.5rem; z-index: 999;

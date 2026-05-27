@@ -1,0 +1,3 @@
+# Netlify _redirects file
+# Redirect apex domain to www
+https://sim4ue.eu/* https://www.sim4ue.eu/:splat 301!

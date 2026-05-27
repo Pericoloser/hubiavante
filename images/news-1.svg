@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220">
+  <!-- News 1: Kick-off meeting -->
+  <defs>
+    <linearGradient id="n1bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#002a63"/>
+      <stop offset="100%" stop-color="#003d8f"/>
+    </linearGradient>
+  </defs>
+  <rect width="420" height="220" rx="8" fill="url(#n1bg)"/>
+  <!-- Flag strip top -->
+  <rect x="0" y="0" width="420" height="5" rx="0" fill="#e63127"/>
+  <rect x="0" y="5" width="420" height="3" fill="#f4a01c"/>
+  <rect x="0" y="8" width="420" height="5" fill="#006600"/>
+  <!-- Table silhouette -->
+  <rect x="80" y="120" width="260" height="50" rx="8" fill="rgba(0,166,156,0.15)" stroke="rgba(0,166,156,0.3)" stroke-width="1"/>
+  <!-- People around table -->
+  <g fill="rgba(255,255,255,0.7)">
+    <circle cx="110" cy="108" r="14"/>
+    <rect x="97" y="122" width="26" height="22" rx="5"/>
+    <circle cx="165" cy="108" r="14"/>
+    <rect x="152" y="122" width="26" height="22" rx="5"/>
+    <circle cx="220" cy="108" r="14"/>
+    <rect x="207" y="122" width="26" height="22" rx="5"/>
+    <circle cx="275" cy="108" r="14"/>
+    <rect x="262" y="122" width="26" height="22" rx="5"/>
+    <circle cx="330" cy="108" r="14"/>
+    <rect x="317" y="122" width="26" height="22" rx="5"/>
+  </g>
+  <!-- Laptop icons on table -->
+  <g fill="rgba(0,166,156,0.5)" stroke="none">
+    <rect x="106" y="144" width="18" height="12" rx="2"/>
+    <rect x="157" y="144" width="18" height="12" rx="2"/>
+    <rect x="214" y="144" width="18" height="12" rx="2"/>
+    <rect x="270" y="144" width="18" height="12" rx="2"/>
+    <rect x="323" y="144" width="18" height="12" rx="2"/>
+  </g>
+  <!-- Flags ES and PT -->
+  <text x="126" y="102" font-size="14">🇪🇸</text>
+  <text x="181" y="102" font-size="14">🇵🇹</text>
+  <text x="236" y="102" font-size="14">🇪🇸</text>
+  <text x="291" y="102" font-size="14">🇵🇹</text>
+  <text x="346" y="102" font-size="14">🇪🇸</text>
+  <!-- Title text -->
+  <text x="210" y="46" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="white">REUNIÓN DE LANZAMIENTO</text>
+  <text x="210" y="66" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="rgba(255,255,255,0.65)">SIM4UE Kick-off Meeting · Febrero 2026</text>
+  <!-- Location -->
+  <text x="210" y="88" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="rgba(0,229,216,0.8)">📍 Granada, España</text>
+  <!-- Bottom bar -->
+  <rect x="0" y="185" width="420" height="35" rx="0" fill="rgba(0,166,156,0.15)"/>
+  <text x="20" y="206" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.5)">Interreg VI-A España-Portugal · POCTEP 2021-2027</text>
+  <text x="400" y="206" text-anchor="end" font-family="monospace" font-size="10" fill="rgba(244,160,28,0.8)">SIM4UE</text>
+</svg>
