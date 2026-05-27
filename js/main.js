@@ -15,7 +15,7 @@ const FORMSPREE_ENDPOINT = FORMSPREE_ID !== 'YOUR_FORM_ID'
 
 /* ── Logo map ───────────────────────────────────────────── */
 const PARTNER_LOGOS = {
-  'BP':  'images/logos/fps.svg',
+  'BP':  'images/logos/fps.png',    // "FPS Vertical Principal.png" → renombrar a fps.png
   'BE2': 'images/logos/usc.svg',
   'BE3': 'images/logos/chtmad.svg',
   'BE4': 'images/logos/hvr.svg',
