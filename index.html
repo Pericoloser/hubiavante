@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SIM4UE – Modelo Integrado de Formación por Simulación Clínica en Urgencias y Emergencias en Entornos Transfronterizos. Proyecto POCTEP cofinanciado por la Unión Europea." />
+  <meta name="keywords" content="SIM4UE, POCTEP, simulación clínica, urgencias, emergencias, formación sanitaria, transfronterizo, España, Portugal, IAVANTE" />
+  <meta name="author" content="Fundación Pública Andaluza Progreso y Salud – IAVANTE" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.sim4ue.eu/" />
+  <meta property="og:title" content="SIM4UE – Simulación Clínica Transfronteriza" />
+  <meta property="og:description" content="Proyecto POCTEP para transformar la formación sanitaria en urgencias y emergencias a ambos lados de la frontera hispano-portuguesa." />
+  <meta property="og:image" content="images/og-image.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SIM4UE – Simulación Clínica Transfronteriza" />
+  <meta name="twitter:description" content="Proyecto POCTEP – Formación en urgencias y emergencias mediante simulación clínica." />
+
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="es" href="https://www.sim4ue.eu/?lang=es" />
+  <link rel="alternate" hreflang="pt" href="https://www.sim4ue.eu/?lang=pt" />
+  <link rel="alternate" hreflang="gl" href="https://www.sim4ue.eu/?lang=gl" />
+  <link rel="alternate" hreflang="en" href="https://www.sim4ue.eu/?lang=en" />
+  <link rel="alternate" hreflang="x-default" href="https://www.sim4ue.eu/" />
+
+  <title>SIM4UE – Simulación Clínica Transfronteriza | POCTEP</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Skip navigation -->
+  <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+
+  <!-- ══════════════════════════════════════════════════
+       TOP BAR – EU/POCTEP strip
+  ══════════════════════════════════════════════════ -->
+  <div class="topbar" role="banner">
+    <div class="container">
+      <div class="topbar-left">
+        <div class="eu-stars" aria-label="Unión Europea">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          <span>★</span><span>★</span>
+        </div>
+        <span class="topbar-text">
+          Cofinanciado por la <strong>Unión Europea</strong> · Programa
+          <strong>Interreg VI-A España-Portugal (POCTEP) 2021-2027</strong>
+        </span>
+      </div>
+      <div class="topbar-right">
+        <a href="https://www.poctep.eu" target="_blank" rel="noopener">POCTEP</a>
+        <a href="https://ec.europa.eu/regional_policy/funding/interreg_en" target="_blank" rel="noopener">Interreg</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════════════════ -->
+  <nav id="navbar" class="navbar" role="navigation" aria-label="Navegación principal">
+    <div class="container">
+
+      <!-- Logo -->
+      <a href="#hero" class="nav-logo" aria-label="SIM4UE – Inicio">
+        <div class="logo-mark" aria-hidden="true">S4</div>
+        <div>
+          <div class="logo-name">SIM<span>4</span>UE</div>
+          <div class="logo-sub">Simulación · Urgencias · Emergencias</div>
+        </div>
+      </a>
+
+      <!-- Nav links -->
+      <ul id="nav-menu" class="nav-menu" role="list">
+        <li><a class="nav-link" href="#proyecto" data-section="proyecto" data-i18n="nav.proyecto">Proyecto</a></li>
+        <li><a class="nav-link" href="#socios" data-section="socios" data-i18n="nav.socios">Socios</a></li>
+        <li><a class="nav-link" href="#actividades" data-section="actividades" data-i18n="nav.actividades">Actividades</a></li>
+        <li><a class="nav-link" href="#noticias" data-section="noticias" data-i18n="nav.noticias">Noticias</a></li>
+        <li><a class="nav-link" href="#contacto" data-section="contacto" data-i18n="nav.contacto">Contacto</a></li>
+      </ul>
+
+      <!-- Language switcher -->
+      <div class="lang-switcher" role="group" aria-label="Selector de idioma">
+        <button class="lang-btn active" data-lang="es" aria-pressed="true" title="Español">ES</button>
+        <button class="lang-btn" data-lang="pt" aria-pressed="false" title="Português">PT</button>
+        <button class="lang-btn" data-lang="gl" aria-pressed="false" title="Galego">GL</button>
+        <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">EN</button>
+      </div>
+
+      <!-- Hamburger -->
+      <button id="nav-toggle" class="nav-toggle" aria-label="Menú" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════════
+       MAIN CONTENT
+  ══════════════════════════════════════════════════ -->
+  <main id="main-content">
+
+    <!-- ── HERO ───────────────────────────────────────── -->
+    <section id="hero" aria-label="Presentación del proyecto">
+      <div class="hero-bg-pattern" aria-hidden="true"></div>
+      <div class="hero-bg-shape" aria-hidden="true"></div>
+      <div class="hero-bg-shape2" aria-hidden="true"></div>
+
+      <div class="hero-container">
+        <!-- Content -->
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="dot" aria-hidden="true"></span>
+            Interreg VI-A España-Portugal · POCTEP 2021-2027
+          </div>
+          <h1 class="hero-title">
+            <span id="hero-tagline">Modelo Integrado de Formación por Simulación Clínica en Urgencias y Emergencias en Entornos Transfronterizos</span>
+          </h1>
+          <p class="hero-subtitle" id="hero-subtitle">
+            Un proyecto POCTEP para transformar la formación sanitaria en urgencias y emergencias a ambos lados de la frontera hispano-portuguesa
+          </p>
+          <div class="hero-cta">
+            <a href="#proyecto" class="btn btn-primary" id="hero-btn-proyecto">Conoce el proyecto</a>
+            <a href="#socios" class="btn btn-outline" id="hero-btn-socios">Ver socios</a>
+          </div>
+        </div>
+
+        <!-- Visual card -->
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-card">
+            <div class="hero-card-title">SIM4UE · 2026–2028</div>
+            <div class="hero-stats-grid">
+              <div class="hero-stat">
+                <div class="val gold">4,7M€</div>
+                <div class="lbl">Presupuesto</div>
+              </div>
+              <div class="hero-stat">
+                <div class="val teal">75%</div>
+                <div class="lbl">UE FEDER</div>
+              </div>
+              <div class="hero-stat">
+                <div class="val">6</div>
+                <div class="lbl">Socios</div>
+              </div>
+              <div class="hero-stat">
+                <div class="val teal">207</div>
+                <div class="lbl">Ediciones</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="hero-scroll" aria-hidden="true">
+        <button class="hero-scroll-btn" onclick="document.getElementById('stats-bar').scrollIntoView({behavior:'smooth'})">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 5v14M5 12l7 7 7-7"/>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- ── STATS BAR ───────────────────────────────────── -->
+    <div id="stats-bar" class="stats-bar" role="region" aria-label="Cifras clave">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-val" data-counter="4725090" data-prefix="€" aria-label="4.725.090 euros">€4.725.090</div>
+            <div class="stat-lbl" data-stat="presupuesto">Presupuesto total</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-val" data-counter="75" data-suffix="%" aria-label="75 por ciento">75%</div>
+            <div class="stat-lbl" data-stat="subvencion">Subvención UE</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-val" aria-label="6 socios">6</div>
+            <div class="stat-lbl" data-stat="socios">Socios</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-val" data-counter="3" aria-label="3 años">3</div>
+            <div class="stat-lbl" data-stat="duracion">Años de proyecto</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PROYECTO ────────────────────────────────────── -->
+    <section id="proyecto" aria-labelledby="proyecto-heading">
+      <div class="container">
+        <div class="text-center reveal">
+          <span class="section-label">POCTEP 2021-2027</span>
+          <h2 class="section-title" id="proyecto-heading" id="proyecto-title">El Proyecto</h2>
+          <p class="section-subtitle" id="proyecto-subtitle">SIM4UE aborda una problemática compartida en territorios transfronterizos</p>
+        </div>
+
+        <div class="proyecto-layout">
+          <!-- Text -->
+          <div class="proyecto-text reveal">
+            <p id="proyecto-p1">SIM4UE es un proyecto cofinanciado por el programa Interreg VI-A España-Portugal (POCTEP) 2021-2027, que responde a la necesidad urgente de mejorar la atención sanitaria en urgencias y emergencias en las regiones transfronterizas de España y Portugal.</p>
+            <p id="proyecto-p2">A través del desarrollo de un Entorno Virtual de Aprendizaje por Simulación, SIM4UE integra metodologías pedagógicas innovadoras, tecnologías inmersivas (Realidad Virtual, Realidad Aumentada, Inteligencia Artificial) y contenidos formativos bilingüEs, con el objetivo de fortalecer las competencias clínicas de los profesionales sanitarios y mejorar la cooperación transfronteriza.</p>
+            <p id="proyecto-p3">El proyecto opera entre el 1 de enero de 2026 y el 31 de diciembre de 2028, con un presupuesto total de 4.725.090 € y la participación de seis instituciones sanitarias y académicas de España y Portugal.</p>
+
+            <div class="obj-list" id="obj-title-container">
+              <h3 style="font-size:1rem;font-weight:800;color:var(--primary);margin-bottom:.5rem" id="obj-title">Objetivos principales</h3>
+              <div class="obj-item reveal reveal-delay-1">
+                <div class="obj-icon" aria-hidden="true">1</div>
+                <p class="obj-text" id="obj1">Desarrollar un Entorno Virtual de Aprendizaje por Simulación para formación abierta en salud en urgencias y emergencias.</p>
+              </div>
+              <div class="obj-item reveal reveal-delay-2">
+                <div class="obj-icon" aria-hidden="true">2</div>
+                <p class="obj-text" id="obj2">Diseñar e implantar una herramienta online multidispositivo con contenidos didácticos innovadores, simulaciones clínicas y recursos formativos en español y portugués.</p>
+              </div>
+              <div class="obj-item reveal reveal-delay-3">
+                <div class="obj-icon" aria-hidden="true">3</div>
+                <p class="obj-text" id="obj3">Integrar itinerarios personalizados, mejora continua de competencias clínicas y cooperación transfronteriza orientada a la mejora de la práctica clínica.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Info panel -->
+          <div class="proyecto-info reveal reveal-delay-2">
+            <div class="info-card">
+              <div class="info-card-row">
+                <span class="lbl" id="poctep-label">Proyecto cofinanciado por</span>
+                <span class="val">POCTEP 2021-2027</span>
+              </div>
+              <div class="info-card-row">
+                <span class="lbl" id="period-label">Periodo de ejecución</span>
+                <span class="val" id="period-value">01/01/2026 – 31/12/2028</span>
+              </div>
+              <div class="info-card-row">
+                <span class="lbl" id="budget-label">Presupuesto total</span>
+                <span class="val" id="budget-value">4.725.090 €</span>
+              </div>
+              <div class="info-card-row">
+                <span class="lbl">Socio coordinador</span>
+                <span class="val">FPS / IAVANTE</span>
+              </div>
+              <div class="info-card-row">
+                <span class="lbl">Subvención UE</span>
+                <span class="val">75% (FEDER)</span>
+              </div>
+              <div class="info-card-row">
+                <span class="lbl">Territorios</span>
+                <span class="val">🇪🇸 España · 🇵🇹 Portugal</span>
+              </div>
+            </div>
+
+            <div class="poctep-badge reveal reveal-delay-3">
+              <div class="eu-flag" aria-hidden="true">🇪🇺</div>
+              <p id="poctep-badge-text">
+                <strong>Cofinanciado por la Unión Europea</strong><br/>
+                Interreg VI-A España-Portugal (POCTEP) 2021-2027<br/>
+                Fondo Europeo de Desarrollo Regional (FEDER)
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SOCIOS / PARTNERS ───────────────────────────── -->
+    <section id="socios" aria-labelledby="socios-heading">
+      <div class="container">
+        <div class="text-center reveal">
+          <span class="section-label">Consorcio</span>
+          <h2 class="section-title" id="socios-heading" id="socios-title">Socios del Proyecto</h2>
+          <p class="section-subtitle" id="socios-subtitle">Seis instituciones líderes de España y Portugal trabajando juntas</p>
+        </div>
+        <div id="partners-grid" class="partners-grid">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ACTIVIDADES ─────────────────────────────────── -->
+    <section id="actividades" aria-labelledby="actividades-heading">
+      <div class="container">
+        <div class="text-center reveal">
+          <span class="section-label">Plan de trabajo</span>
+          <h2 class="section-title" id="actividades-heading" id="actividades-title">Actividades del Proyecto</h2>
+          <p class="section-subtitle" id="actividades-subtitle">Seis actividades estructuradas para transformar la formación sanitaria transfronteriza</p>
+        </div>
+        <div id="activities-grid" class="activities-grid">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ── NOTICIAS / NEWS ─────────────────────────────── -->
+    <section id="noticias" aria-labelledby="noticias-heading">
+      <div class="container">
+        <div class="text-center reveal">
+          <span class="section-label">Actualidad</span>
+          <h2 class="section-title" id="noticias-heading" id="noticias-title">Noticias</h2>
+          <p class="section-subtitle" id="noticias-subtitle">Últimas novedades del proyecto SIM4UE</p>
+        </div>
+        <div id="news-grid" class="news-grid">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CONTACTO ────────────────────────────────────── -->
+    <section id="contacto" aria-labelledby="contacto-heading">
+      <div class="container">
+        <div class="text-center reveal">
+          <span class="section-label">Contacto</span>
+          <h2 class="section-title" id="contacto-heading" id="contacto-title">Contacto</h2>
+          <p class="section-subtitle" id="contacto-subtitle">¿Tienes preguntas sobre el proyecto SIM4UE?</p>
+        </div>
+
+        <div class="contact-layout">
+          <!-- Info -->
+          <div class="contact-info">
+            <div class="contact-card reveal">
+              <h3 id="coord-title">Entidad coordinadora</h3>
+              <div class="contact-line">
+                <span class="contact-icon" aria-hidden="true">🏛️</span>
+                <div class="contact-text">
+                  <strong id="coord-name">Fundación Pública Andaluza Progreso y Salud</strong><br/>
+                  <span id="coord-unit">Unidad IAVANTE – Simulación e Innovación Educativa</span>
+                </div>
+              </div>
+              <div class="contact-line">
+                <span class="contact-icon" aria-hidden="true">📍</span>
+                <div class="contact-text" id="coord-address">Avda. de la Innovación, s/n · Parque Tecnológico de la Salud · 18016 Granada, España</div>
+              </div>
+              <div class="contact-line">
+                <span class="contact-icon" aria-hidden="true">✉️</span>
+                <div class="contact-text"><a href="mailto:sim4ue@iavante.es" id="coord-email">sim4ue@iavante.es</a></div>
+              </div>
+            </div>
+
+            <div class="reveal reveal-delay-2">
+              <h3 style="font-size:.85rem;font-weight:700;color:var(--text);margin-bottom:.75rem;text-transform:uppercase;letter-spacing:.06em" id="social-title">Síguenos</h3>
+              <div class="social-links">
+                <a href="#" class="social-link" rel="noopener" aria-label="Twitter / X de SIM4UE">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.256 5.626 5.908-5.626Zm-1.161 17.52h1.833L7.084 4.126H5.117Z"/></svg>
+                  Twitter / X
+                </a>
+                <a href="#" class="social-link" rel="noopener" aria-label="LinkedIn de SIM4UE">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  LinkedIn
+                </a>
+                <a href="#" class="social-link" rel="noopener" aria-label="YouTube de SIM4UE">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                  YouTube
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form -->
+          <div class="contact-form reveal reveal-delay-1">
+            <form id="contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="inp-name" data-i18n="contacto.form.name">Nombre</label>
+                  <input type="text" id="inp-name" name="name" required placeholder="Nombre" autocomplete="given-name" />
+                </div>
+                <div class="form-group">
+                  <label for="inp-email" data-i18n="contacto.form.email">Correo electrónico</label>
+                  <input type="email" id="inp-email" name="email" required placeholder="correo@ejemplo.com" autocomplete="email" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inp-org" data-i18n="contacto.form.org">Organización</label>
+                <input type="text" id="inp-org" name="org" placeholder="Organización" autocomplete="organization" />
+              </div>
+              <div class="form-group">
+                <label for="inp-message" data-i18n="contacto.form.message">Mensaje</label>
+                <textarea id="inp-message" name="message" required placeholder="Escribe tu mensaje aquí..."></textarea>
+              </div>
+              <button type="submit" id="form-submit" class="btn-submit">Enviar mensaje</button>
+              <div class="form-message" role="alert" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════ -->
+  <footer role="contentinfo">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Brand -->
+          <div class="footer-brand">
+            <a href="#hero" class="nav-logo" style="margin-bottom:1rem;display:inline-flex" aria-label="SIM4UE inicio">
+              <div class="logo-mark" aria-hidden="true">S4</div>
+              <div>
+                <div class="logo-name">SIM<span>4</span>UE</div>
+                <div class="logo-sub">Simulación · Urgencias · Emergencias</div>
+              </div>
+            </a>
+            <p id="footer-funded">Cofinanciado por la Unión Europea a través del programa Interreg VI-A España-Portugal (POCTEP) 2021-2027. El contenido de este sitio web es responsabilidad exclusiva del consorcio SIM4UE y no refleja necesariamente la opinión de la Unión Europea.</p>
+          </div>
+
+          <!-- Links: Proyecto -->
+          <div class="footer-col">
+            <h4>Proyecto</h4>
+            <nav class="footer-links" aria-label="Secciones del proyecto">
+              <a href="#proyecto" data-i18n="nav.proyecto">Proyecto</a>
+              <a href="#socios" data-i18n="nav.socios">Socios</a>
+              <a href="#actividades" data-i18n="nav.actividades">Actividades</a>
+              <a href="#noticias" data-i18n="nav.noticias">Noticias</a>
+              <a href="#contacto" data-i18n="nav.contacto">Contacto</a>
+            </nav>
+          </div>
+
+          <!-- Links: Instituciones -->
+          <div class="footer-col">
+            <h4>Socios</h4>
+            <nav class="footer-links" aria-label="Instituciones socias">
+              <a href="https://www.iavante.es" target="_blank" rel="noopener">FPS / IAVANTE</a>
+              <a href="https://www.usc.es" target="_blank" rel="noopener">USC</a>
+              <a href="https://www.chtmad.min-saude.pt" target="_blank" rel="noopener">CHTMAD</a>
+              <a href="https://www.chvnge.min-saude.pt" target="_blank" rel="noopener">HVR</a>
+              <a href="https://www.chuc.min-saude.pt" target="_blank" rel="noopener">CHUC</a>
+              <a href="https://www.fisevi.com" target="_blank" rel="noopener">FISEVI</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <nav class="footer-legal" aria-label="Legal">
+          <span id="footer-rights">© 2026 SIM4UE. Todos los derechos reservados.</span>
+          <a href="#" id="footer-privacy">Política de privacidad</a>
+          <a href="#" id="footer-legal">Aviso legal</a>
+          <a href="#" id="footer-cookies">Cookies</a>
+        </nav>
+        <div class="footer-eu" aria-label="Financiación europea">
+          <div class="eu-logo-mini">
+            <div class="eu-stars" aria-hidden="true">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <span>Financiado por la UE</span>
+          </div>
+          <div class="eu-logo-mini">
+            <span>🔗 POCTEP 2021-2027</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════════════════════════
+       COOKIE BANNER
+  ══════════════════════════════════════════════════ -->
+  <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Aviso de cookies" aria-modal="false">
+    <p class="cookie-text">
+      Este sitio web utiliza cookies propias y de terceros para mejorar su experiencia.
+      Al continuar navegando, acepta su uso. <a href="#" onclick="return false">Más información</a>
+    </p>
+    <div class="cookie-actions">
+      <button class="cookie-more">Más información</button>
+      <button class="cookie-accept">Aceptar</button>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════
+       BACK TO TOP
+  ══════════════════════════════════════════════════ -->
+  <button id="back-to-top" class="back-to-top" aria-label="Volver al inicio">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <path d="M12 19V5M5 12l7-7 7 7"/>
+    </svg>
+  </button>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
