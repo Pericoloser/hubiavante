@@ -478,7 +478,7 @@ function initContactForm() {
           throw new Error('Server error');
         }
       } catch (err) {
-        if (msg) { msg.className = 'form-message error'; msg.textContent = 'Error al enviar. Inténtalo de nuevo o escríbenos a sim4ue@iavante.es'; }
+        if (msg) { msg.className = 'form-message error'; msg.textContent = 'Error al enviar. Inténtalo de nuevo o escríbenos a info@sim4ue.eu'; }
       }
     } else {
       // Demo mode (no Formspree configured yet)
