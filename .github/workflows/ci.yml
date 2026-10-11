@@ -1,0 +1,43 @@
+name: HUBIAVANTE CI
+on:
+  push:
+    branches: [main, 'fix/**']
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  integration:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: hubiavante
+          POSTGRES_PASSWORD: ci-only-database-password
+          POSTGRES_DB: hubiavante_test
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd "pg_isready -U hubiavante -d hubiavante_test"
+          --health-interval 5s --health-timeout 5s --health-retries 20
+    env:
+      DATABASE_URL: postgresql://hubiavante:ci-only-database-password@localhost:5432/hubiavante_test
+      JWT_SECRET: ci-only-signing-secret-with-more-than-32-characters
+      RUN_INTEGRATION_TESTS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: |
+            backend/package-lock.json
+            frontend/package-lock.json
+      - run: npm ci
+        working-directory: backend
+      - run: npx prisma generate && npx prisma migrate deploy
+        working-directory: backend
+      - run: npm test && npm run test:integration
+        working-directory: backend
+      - run: npm ci && npm run build
+        working-directory: frontend
